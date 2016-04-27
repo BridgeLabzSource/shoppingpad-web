@@ -17234,7 +17234,7 @@ angular.module('material.components.toolbar', [
  *   <md-toolbar>
  *
  *     <div class="md-toolbar-tools">
- *       <span>My App's Title</span>
+ *       <span>My app's Title</span>
  *
  *       <!-- fill up the space between left and right area -->
  *       <span flex></span>

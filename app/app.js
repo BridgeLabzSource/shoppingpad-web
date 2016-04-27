@@ -1,0 +1,1 @@
+angular.module('shoppingPad',['ngMaterial','ui.router']);
