@@ -7,10 +7,13 @@
 
 
 
-<body   ng-app="starterApp">
+<body   ng-app="starterApp" ng-cloak ng-controller="mainController">
 
+        <!--Complete layout-->
          <div layout-lt-lg="row" class="screen-bg">
-             <div flex-lt-lg="100" >
+             <div flex-lt-lg="100">
+
+                 <!--header-->
                <md-toolbar class="app-bar-bg" style="background-color: #9013fe;">
                    <div class="status-bar-bg"> </div>
                    <div class="md-toolbar-tools">
@@ -29,20 +32,26 @@
                    </div>
                </md-toolbar>
 
-
+                 <!--content-->
                 <div>
-
                    <md-content>
                        <h3 style="text-align: center">Welcome to ShoppingPad</h3>
                        <div style="margin-top: 156px">
-                           <form>
+                           <form name="userForm" novalidate>
+
+                               <div class="form-group" ng-class="{ 'has-error' : userForm.mobile.$invalid && !userForm.mobile.$pristine }">
                             <md-icon md-svg-src="App/images/device.svg" style="margin-left: 16px"></md-icon>
-                            <input type="text" placeholder="Enter registered mobile no" style="border-right: none;border-left: none;border-top: none;width: 255px;margin-left: 22px">
-                               <br><br>
+                            <input type="text" placeholder="Enter registered mobile no" name="mobile" class="form-control" required style="border-right: none;border-left: none;border-top: none;width: 255px;margin-left: 22px">
+                                   <p ng-show="userForm.mobile.$invalid && !userForm.mobile.$pristine" class="help-block">You name is required.</p>
+                               </div>
+
+                                   <br>
                             <md-icon md-svg-src="App/images/lock.svg" style="margin-left: 16px"></md-icon>
-                            <input type="text" placeholder="Enter 3-D Secure pin" style="border-right: none;border-left: none;border-top: none;width: 255px;margin-left: 22px">
+                            <input type="text" placeholder="Enter 3-D Secure pin" name="pin no" class="form-control" style="border-right: none;border-left: none;border-top: none;width: 255px;margin-left: 22px">
                            </form>
                        </div>
+
+                       <!--footer-->
                        <div>
                            <md-toolbar  class="Rectangle-409" style="background-color: #9013fe;">
                                  <md-button class="md-button" style="margin-top: 14px">
@@ -64,3 +73,5 @@
 
 </body>
 </html>
+
+<!--style="border-right: none;border-left: none;border-top: none;width: 255px;margin-left: 22px"-->
