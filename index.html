@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link href="./bower_components/angular-material/angular-material.css" rel="stylesheet" />
+</head>
+
+<style>
+    body{
+        width: 360px;
+        margin: auto;
+        margin-top: 30px;
+        height: 250px;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    }
+
+</style>
+
+<body ng-app="starterApp">
+
+
+           <md-toolbar class="md-hue-2">
+               <div class="md-toolbar-tools">
+
+                   <md-button class="md-icon-button" aria-label="Settings" >
+                       <md-icon md-svg-icon="App/images/back1.svg"></md-icon>
+                   </md-button>
+                   <h2>
+                       <span>Sign in</span>
+                   </h2>
+                   <span flex=""></span>
+                   <md-button class="md-icon-button" aria-label="Favorite">
+                       <md-icon md-svg-icon="App/images/a.svg"></md-icon>
+                   </md-button>
+
+               </div>
+           </md-toolbar>
+
+
+       <div>
+
+           <md-content>
+               <h3 style="text-align: center">Welcome to ShoppingPad</h3>
+               <div style="margin-top: 156px">
+                    <md-icon md-svg-src="App/images/device.svg" style="margin-left: 16px"></md-icon>
+                    <input type="text" placeholder="Enter registered mobile no" style="border-right: none;border-left: none;border-top: none;width: 255px;margin-left: 22px">
+                   <br><br>
+                    <md-icon md-svg-src="App/images/lock.svg" style="margin-left: 16px"></md-icon>
+                    <input type="text" placeholder="Enter 3-D Secure pin" style="border-right: none;border-left: none;border-top: none;width: 255px;margin-left: 22px">
+               </div>
+               <div>
+                   <md-toolbar style="margin-top: 250px">
+                         <md-button class="md-button" style="margin-top: 14px">
+                            <span style="font-size: 30px">LOGIN</span>
+                        </md-button>
+                   </md-toolbar>
+               </div>
+           </md-content>
+
+       </div>
+
+<script src="./bower_components/angular/angular.js" type="text/javascript" ></script>
+<script src="./bower_components/angular-animate/angular-animate.js" type="text/javascript" ></script>
+<script src="./bower_components/angular-aria/angular-aria.js" type="text/javascript" ></script>
+<script src="./bower_components/angular-material/angular-material.js" type="text/javascript" ></script>
+<script src="app.js"></script>
+
+</body>
+</html>
