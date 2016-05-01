@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "AUTOMATIVE",
+    "icon": "assets/images/add.svg"
+
+  },
+  {
+    "id": 1,
+    "name": "REAL ESTATE",
+    "icon": "assets/images/add.svg"
+
+  },
+  {
+    "id": 2,
+    "name": "RETAIL",
+    "icon": "assets/images/add.svg"
+
+  }
+]
