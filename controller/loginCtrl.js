@@ -1,18 +1,5 @@
-angular.module('shoppingPad')
+angular.module('shoppingPad').controller('loginCtrl',loginCtrl);
 
-    .controller('loginCtrl',function($scope) {
+function loginCtrl($scope,$stateParams,$state) {
 
-        //$scope.anurag=$rootScope.abc;
-        //console.log("inside login")
-        //$scope.singh=$rootScope.def;
-        //console.log($scope.anurag,$scope.singh)
-
-        var retriveData=localStorage.getItem("passingData");
-        console.log("inside login");
-        console.log(retriveData);
-
-        var login=JSON.parse(retriveData);
-        console.log(login)
-
-    })
-
+}
