@@ -1,2 +1,3 @@
-.bower_component
+bower_component
+.idea
 .node_modules

@@ -1,4 +1,4 @@
-angular.module('starterApp', ['ui.router','ngAria','ngAnimate','ngStorage'])
+angular.module('starterApp', ['ui.router','ngAria','ngAnimate','ngStorage','ngMaterial'])
     .config(function($stateProvider,$urlRouterProvider) {
 
         $urlRouterProvider.otherwise('/home');
