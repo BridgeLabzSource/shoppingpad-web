@@ -4,17 +4,17 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
         $stateProvider
             .state('register',{
                 url:'/register',
-                templateUrl:'template/registration.html',
+                templateUrl:'template/register/registration.html',
                 controller:'registerCtrl'
             })
             .state('register-1',{
                 url:'/register1',
-                templateUrl:'template/registration-1.html',
+                templateUrl:'template/register/registration-1.html',
                 controller:'registerCtrl'
             })
             .state('register-2',{
-                url:'/register2/:categoryId',
-                templateUrl:'template/registration-2.html',
+                url:'/register2/:id',
+                templateUrl:'template/register/registration-2.html',
                 controller:'registerCtrl'
             })
     //        .state('business',{
