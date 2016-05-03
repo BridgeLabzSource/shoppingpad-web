@@ -1,4 +1,4 @@
-angular.module('starterApp')
+angular.module('shoppingPad')
     .controller('signInCtrl', function($scope,$state) {
 
 

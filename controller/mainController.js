@@ -1,4 +1,4 @@
-angular.module('starterApp')
+angular.module('shoppingPad')
 
     .controller('mainController',function($scope,$state){
 
