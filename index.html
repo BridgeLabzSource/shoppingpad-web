@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
-
-
 <body ng-app="shoppingPad">
-
 <!--Complete layout-->
 <div layout-lt-lg="row" class="screen-bg">
     <div flex-lt-lg="100">
-
         <!--header-->
         <md-toolbar class="app-bar-bg" style="background-color: #9013fe;">
             <div class="status-bar-bg"></div>
@@ -27,32 +24,35 @@
                 <md-button class="md-icon-button" aria-label="Favorite">
                     <!--<md-icon md-svg-icon="app/images/a.svg"></md-icon>-->
                 </md-button>
-
             </div>
         </md-toolbar>
-
         <!--content-->
         <div>
             <md-content>
 
                 <ui-view></ui-view>
             </md-content>
-
-             <!-- footer-->
-             
         </div>
     </div>
 </div>
-
-
+<!--dependencies-->
 <script src="bower_components/angular/angular.js" type="text/javascript"></script>
 <script src="bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>
 <script src="bower_components/angular-aria/angular-aria.js" type="text/javascript"></script>
 <script src="bower_components/angular-material/angular-material.js" type="text/javascript"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+<script src="bower_components/angular-material-icons/angular-material-icons.js"></script>
+<script src="bower_components/angular-resource/angular-resource.min.js"></script>
+<script src="bower_components/ngstorage/ngStorage.min.js" type="text/javascript"></script>
+<!--main script file-->
 <script src="app.js"></script>
+<!--controllers-->
+<script src="controller/registerCtrl.js"></script>
 
-<!--shoppingpad controllers js files-->
+<script src="controller/mainController.js"></script>
+<script src="controller/signInCtrl.js"></script>
+<script src="controller/loginCtrl.js"></script>
 <script src="controller/broadCastCtrl.js"></script>
 <script src="controller/addCustomerCtrl.js"></script>
 <script src="controller/customerDirectoryCtrl.js"></script>
@@ -60,6 +60,7 @@
 <script src="services/broadCastService.js"></script>
 <script src="services/addCustomerService.js"></script>
 <script src="services/customerDirectoryService.js"></script>
+<script src="services/registerServices.js"></script>
 
 </body>
 </html>
