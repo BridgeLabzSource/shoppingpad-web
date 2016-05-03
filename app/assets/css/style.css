@@ -1,0 +1,57 @@
+.screen-bg {
+    width: 360px;
+    margin: auto;
+    /*margin-top: 30px;*/
+    height: 640px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.1);
+
+}
+.app-bar-bg {
+    width: 360px;
+    height: 80px;
+    /*background-color: #9013fe;*/
+
+}
+
+.status-bar-bg {
+    width: 360px;
+    height: 24px;
+    background-color: #9013fe;
+
+}
+
+.registerPadding{
+padding-top: 300px;
+}
+
+.loginBtn{
+    width: 47px;
+    height: 21px;
+    font-family: Roboto-Medium;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.Please-wait-for-One{
+    font-family: Avenir-Medium;
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 0px
+}
+
+.We-have-sent-an-OTP {
+    height: 38px;
+    margin-left: 50px;
+    font-family: Avenir-Book;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: 5px;
+}
