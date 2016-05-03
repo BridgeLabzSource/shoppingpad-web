@@ -1,8 +1,9 @@
 (function() {
     angular.module('shoppingPad')
-        .factory('registerService', function ($http) {
+        .factory('registerService', function ($http,$q) {
             //stores json data into category array.
             var category = [];
+            var cur_category=null;
             return {
                 //function to get all category
                 getAll: function () {
@@ -12,20 +13,33 @@
                         return category;
                     });
                 },
-                //function to get one category detail by id.
+                // get category by id
                 getUser: function (chatId) {
                     for (var i = 0; i < category.length; i++) {
-                        console.log(category.length);
                         console.log(category);
-                        console.log(category[i]);
-                        ///TODO
+                        console.log(category.length);
+                      ///TODO
                         console.log(chatId);
-                        if(parseInt(category[i].id) == parseInt(chatId)) {
+                        if(category[i].id === parseInt(chatId)) {
                             return category[i];
                         }
                     }
+
                     return null;
+                },
+                //set category by id
+                setCategory:function(id){
+                    var deferred=$q.defer();
+                    console.log('inside setCategory Service');
+                    if(typeof id==="number"){
+                        cur_category=id;
+                    }
                 }
+                //removeCategory:function(id){
+                //  cur_category.remove(id);
+                //},
+
+
             }
         });
 })();
