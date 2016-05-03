@@ -379,5 +379,12 @@
     fill: white; }
 .chipsdemoBasicUsage .custom-chips .md-chip .md-chip-remove-container button.vegetablechip:hover, .chipsdemoBasicUsage .custom-chips .md-chip .md-chip-remove-container button.vegetablechip:focus {
     background: rgba(255, 0, 0, 0.8); }
-.chipsdemoBasicUsage .custom-chips .md-chip:not(.md-readonly) md-chip-template {
+.chipsdemoBasicUsage .custom-chips .md-chip:not(.md-readonly) {
     padding-right: 5px; }
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/*//md-chip-template*/
