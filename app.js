@@ -13,7 +13,7 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
                 controller:'registerCtrl'
             })
             .state('register-2',{
-                url:'/register2/:id',
+                url:'/register1/:id',
                 templateUrl:'template/register/registration-2.html',
                 controller:'registerCtrl'
             })

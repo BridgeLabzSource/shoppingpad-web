@@ -9,9 +9,9 @@ function registerCtrl($scope,registerService,$stateParams,$state) {
         })
     },
         $scope.setCategory = function (id) {
-            registerService.setCategory($scope.id).then(function (response) {
+            registerService.setCategory($stateParams.id).then(function (response) {
                 $scope.category = response;
-                //$state.go('register-2', {id: id})
+                $state.go('register-2', {id: id})
             });
         }
 }

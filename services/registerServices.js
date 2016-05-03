@@ -35,13 +35,13 @@
                         url:'json/dummyJson.json',
                        param:{id:id}
                     }).success(function (response) {
-                            if (typeof response.data === "number") {
-                                deferred.resolve(response.data);
+                            if (typeof response.id === "number") {
+                                deferred.resolve(response.id);
                             }else {
-                                deferred.reject(response.data);
+                                deferred.reject(response.id);
                             }
                     }).error(function (response) {
-                        deferred.reject(response.data);
+                        deferred.reject(response.id);
                     });
 
                             return deferred.promise;
@@ -50,7 +50,7 @@
 
             }
         });
-                //removeCategory:function(id){
+    //removeCategory:function(id){
                 //  cur_category.remove(id);
                 //},
 
