@@ -85,3 +85,87 @@
     margin-top: 550px;
     color: #000000;
 }
+.Rectangle-602 {
+  width: 360px;
+  height: 72px;
+  background-color: #fff1b5;
+}
+#Rectangle-541 {
+    margin-left: 16px;
+    margin-top: 18px;
+  width: 328px;
+  height: 56px;
+  border-radius: 3px;
+  border:1px solid #9013fe
+}
+#Rectangle-542{
+
+    margin-top:18px;
+    margin-left: 16px;
+  width: 328px;
+  height: 56px;
+  border-radius: 3px;
+  border:1px solid #9013fe
+}
+#seprate{
+    margin-top: 50px;
+    margin-left: 155px;
+}
+
+.ic_assignment_ind_black_24px {
+    margin-left: 16px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.ic_perm_device_information_black_24px {
+    margin-left: 16px;
+    margin-top: 0px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.Upload-CSV-from-mem {
+    margin-left: 15px;
+    margin-top: 15px;
+  font-size: 16px;
+  color: #9013fe;
+}
+.Add-from-phonebook {
+    margin-top: 15px;
+    margin-left: 16px;
+  
+  font-size: 16px;
+  color: #9013fe;
+   
+}
+.ic_cloud_download_black_24px {
+    margin-top: 0px;
+    margin-left: 16px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+#line{
+
+    margin-top:18px;
+    margin-left: 16px;
+   width: 144px;
+  height: 1px;
+  border:1px solid #9013fe;
+}
+.Bottom { 
+    margin-top: 85px;
+  width: 360px;
+  height: 48px;
+  background-color: #9013fe;
+}
+.ADD-CUSTOMER {
+    margin-left: 115px;
+  width: 130px;
+  height: 22px;
+
+  font-size: 14px;
+  color: #ffffff;
+}
+.md-tab{text-transform: none}
