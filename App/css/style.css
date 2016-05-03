@@ -20,9 +20,38 @@
 
 }
 
-.Rectangle-409 {
-    width: 360px;
-    height: 48px;
-    background-color: #9013fe;
-   margin-top:300px;
+.registerPadding{
+padding-top: 300px;
+}
+
+.loginBtn{
+    width: 47px;
+    height: 21px;
+    font-family: Roboto-Medium;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.Please-wait-for-One{
+    font-family: Avenir-Medium;
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 0px
+}
+
+.We-have-sent-an-OTP {
+    height: 38px;
+    margin-left: 50px;
+    font-family: Avenir-Book;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    margin-right: 50px;
+    margin-top: 5px;
 }

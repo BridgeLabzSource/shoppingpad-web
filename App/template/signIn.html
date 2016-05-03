@@ -1,0 +1,38 @@
+<!--content-->
+    <div>
+        <md-content>
+            <h3 style="text-align: center">Welcome to ShoppingPad</h3>
+            <div style="margin-top: 30px">
+                <form name="myForm" ng-app="starterApp" ng-controller="signInCtrl" class="container-fluid" ng-submit="submit()" style="margin-top: 157px">
+                    <div class="row" style="margin-left: 16px">
+                        <div class="col-xs-8">
+                            <md-input-container>
+                                <md-icon md-svg-icon="images/device.svg"></md-icon>
+                                <input type="number" placeholder="Enter registered mobile no" name="name" id="name" ng-model="name" ng-required="true" minlength="10">
+                                <div ng-messages="myForm.name.$error">
+                                    <div ng-message="required">Registered mobile no.</div>
+                                    <div ng-message="minlength">too short</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+                        <div class="col-xs-8">
+                            <md-input-container>
+                                <md-icon md-svg-icon="images/lock.svg"></md-icon>
+                                <input type="password" placeholder="Enter 3-D secure pin" name="security" id="security" ng-model="security" ng-required="true" minlength="6">
+                                <div ng-messages="myForm.name.$error">
+                                    <div ng-message="required">Enter Pin no(6-digit).</div>
+                                    <div ng-message="minlength">too short</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+                    </div>
+                    <div>
+                    <md-toolbar style="margin-top: 175px;">
+                        <md-button class="md-primary" ng-disabled="myForm.$invalid" style="margin-top: 15px" ng-click="signIn()">LOGIN</md-button>
+                    </md-toolbar>
+                    </div>
+                </form>
+            </div>
+        </md-content>
+
+    </div>
