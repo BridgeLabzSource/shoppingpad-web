@@ -3,12 +3,12 @@
         .factory('registerService', function ($http,$q) {
             //stores json data into category array.
             var category = [];
-            var cur_category=null;
+            var cur_category = null;
             return {
                 //function to get all category
                 getAll: function () {
                     //calling json data
-                    return $http.get('json/dummyJson.json').then(function(response) {
+                    return $http.get('json/dummyJson.json').then(function (response) {
                         category = response.data;
                         return category;
                     });
@@ -18,9 +18,9 @@
                     for (var i = 0; i < category.length; i++) {
                         console.log(category);
                         console.log(category.length);
-                      ///TODO
+                        ///TODO
                         console.log(chatId);
-                        if(category[i].id === parseInt(chatId)) {
+                        if (category[i].id === parseInt(chatId)) {
                             return category[i];
                         }
                     }
@@ -28,20 +28,32 @@
                     return null;
                 },
                 //set category by id
-                setCategory:function(id){
-                    var deferred=$q.defer();
-                    console.log('inside setCategory Service');
-                    if(typeof id==="number"){
-                        cur_category=id;
-                    }
+                setCategory: function (id) {
+                    var deferred = $q.defer();
+                    $http({
+                        method:'GET',
+                        url:'json/dummyJson.json',
+                       param:{id:id}
+                    }).success(function (response) {
+                            if (typeof response.data === "number") {
+                                deferred.resolve(response.data);
+                            }else {
+                                deferred.reject(response.data);
+                            }
+                    }).error(function (response) {
+                        deferred.reject(response.data);
+                    });
+
+                            return deferred.promise;
                 }
-                //removeCategory:function(id){
-                //  cur_category.remove(id);
-                //},
 
 
             }
         });
+                //removeCategory:function(id){
+                //  cur_category.remove(id);
+                //},
+
 })();
 
 //(function(){

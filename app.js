@@ -1,15 +1,20 @@
-angular.module('shoppingPad', ['ui.router', 'ngAria', 'ngAnimate', 'ngStorage', 'ngMaterial'])
-    .config(function ($stateProvider, $urlRouterProvider) {
-
-        $urlRouterProvider.otherwise('/home');
-
-        //    Home State Routing
+angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate','ngAria','ngMessages'])
+    .config(function ($stateProvider,$urlRouterProvider){
+       $urlRouterProvider.otherwise('/register');
         $stateProvider
+            .state('register',{
+                url:'/register',
+                templateUrl:'template/register/registration.html',
+                controller:'registerCtrl'
             .state('register', {
                 url: '/register',
                 templateUrl: 'template/registration.html',
                 controller: 'registerCtrl'
             })
+            .state('register-1',{
+                url:'/register1',
+                templateUrl:'template/register/registration-1.html',
+                controller:'registerCtrl'
             .state('register-1', {
                 url: '/register1',
                 templateUrl: 'template/registration-1.html',
@@ -34,7 +39,15 @@ angular.module('shoppingPad', ['ui.router', 'ngAria', 'ngAnimate', 'ngStorage', 
                 templateUrl: 'template/login.html',
                 controller: 'loginCtrl'
 
+            .state('register-2',{
+                url:'/register2/:id',
+                templateUrl:'template/register/registration-2.html',
+                controller:'registerCtrl'
             })
-    })
-
-//'ngMaterial','ngAria','ngAnimate','ngMessages','ngStorage','ngMaterial'
+    //        .state('business',{
+    //          url:'/business',
+    //            templateUrl:'template/businessSignup.html',
+    //            controller:'businessCtrl'
+    //
+    //})
+    });
