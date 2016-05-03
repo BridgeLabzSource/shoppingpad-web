@@ -10,17 +10,17 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
             .state('register-1',{
                 url:'/register1',
                 templateUrl:'template/registration-1.html',
-                controller:'registrationCtrl'
+                controller:'registerCtrl'
             })
             .state('register-2',{
-                url:'/register2/:chatId',
+                url:'/register2/:categoryId',
                 templateUrl:'template/registration-2.html',
-                controller:'registrationCtrl1'
+                controller:'registerCtrl'
             })
-            .state('business',{
-              url:'/business',
-                templateUrl:'template/businessSignup.html',
-                controller:'businessCtrl'
-
-    })
+    //        .state('business',{
+    //          url:'/business',
+    //            templateUrl:'template/businessSignup.html',
+    //            controller:'businessCtrl'
+    //
+    //})
     });
