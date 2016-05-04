@@ -4,7 +4,7 @@ function addCustomer($q,$http){
 	this.addCustomer=function(customer){
 		return $http({
 			method:'POST',
-			url:'http://54.86.64.100:3000/api/v1/user/signup',
+			url:'http://localhost:3002/api/addCustomer',
 			data:customer,
 			headers:{'Content-Type': 'application/json'}
 		}).then(
@@ -30,9 +30,3 @@ function addCustomer($q,$http){
     // 	data:''
     // })
 }
-
-
-(function(){
-	console.log("executed");
-
-})();

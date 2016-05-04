@@ -1,6 +1,7 @@
 angular.module('shoppingPad').controller('addCustomerCtrl',addCustomer);
 //This is controller to add Customer data to server
 
+
 function addCustomer($scope,addCustomerService){
 	alert("Add Customer controller");
     //A function invoke on button (add Customer)
@@ -24,3 +25,5 @@ function addCustomer($scope,addCustomerService){
 	 //    alert(customer);	
 	}
 }
+
+

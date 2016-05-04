@@ -1,7 +1,7 @@
 
 angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate','ngAria','ngMessages'])
     .config(function ($stateProvider,$urlRouterProvider) {
-        $urlRouterProvider.otherwise('/register');
+        $urlRouterProvider.otherwise('/addCustomer');
         $stateProvider
             .state('register', {
                 url: '/register',
@@ -31,15 +31,15 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
                 templateUrl:'template/register/registration-2.html',
                 controller:'registerCtrl'
             })
-              .state('broadCast',{
+            .state('broadCast',{
             url:'/broadCast',
-            templateUrl:'/shoppingpad-web/app/template/broadCast.html',
+            templateUrl:'/shoppingpad-web/template/broadCast.html',
             controller:'broadCastCtrl'
         })
         //this is state for add Customer Screen
         .state('addCutomer',{
             url:'/addCustomer',
-            templateUrl:'/shoppingpad-web/app/template/addCustomer.html',
+            templateUrl:'/shoppingpad-web/template/addCustomer.html',
             controller:'addCustomerCtrl'
         })
         .state('customerDirectory',{
@@ -47,4 +47,5 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
             templateUrl:'/shoppingpad-web/app/template/customerDirectory.html',
             controller:'customerDirectoryCtrl'
         });
+    });
   
