@@ -33,6 +33,7 @@
     height: 640px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.1);
 
+
 }
 .app-bar-bg {
     width: 360px;
@@ -169,3 +170,16 @@
   color: #ffffff;
 }
 .md-tab{text-transform: none}
+#Cust_Rectangle-602 {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height:560px;
+  width: 360px;
+  
+}
+#scrollA{
+ 
+ 
+  height:560px;
+  /*width: 360px;*/
+}

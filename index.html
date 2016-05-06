@@ -4,6 +4,10 @@
 
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <script
+              src="https://code.jquery.com/jquery-2.2.3.min.js"
+              integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
+              crossorigin="anonymous"></script>
 </head>
 <body ng-app="shoppingPad">
 <!--Complete layout-->
@@ -13,7 +17,6 @@
         <md-toolbar class="app-bar-bg" style="background-color: #9013fe;">
             <div class="status-bar-bg"></div>
             <div class="md-toolbar-tools">
-
                 <md-button class="md-icon-button" aria-label="Settings">
                     <!--<md-icon md-svg-icon="app/images/back1.svg"></md-icon>-->
                 </md-button>
@@ -29,7 +32,6 @@
         <!--content-->
         <div>
             <md-content>
-
                 <ui-view></ui-view>
             </md-content>
         </div>
@@ -49,18 +51,15 @@
 <script src="app.js"></script>
 <!--controllers-->
 <script src="controller/registerCtrl.js"></script>
-
 <script src="controller/mainController.js"></script>
 <script src="controller/signInCtrl.js"></script>
 <script src="controller/loginCtrl.js"></script>
 <script src="controller/broadCastCtrl.js"></script>
-<script src="controller/addCustomerCtrl.js"></script>
-<script src="controller/customerDirectoryCtrl.js"></script>
+<script src="controller/customerCtrl.js"></script>
 <!--shoppingpad services js files-->
 <script src="services/broadCastService.js"></script>
-<script src="services/addCustomerService.js"></script>
-<script src="services/customerDirectoryService.js"></script>
 <script src="services/registerServices.js"></script>
+<script src="services/customerService.js"></script>
 
 </body>
 </html>

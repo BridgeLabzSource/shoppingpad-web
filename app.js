@@ -1,7 +1,7 @@
 
 angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate','ngAria','ngMessages'])
     .config(function ($stateProvider,$urlRouterProvider) {
-        $urlRouterProvider.otherwise('/addCustomer');
+        $urlRouterProvider.otherwise('/customerDirectory');
         $stateProvider
             .state('register', {
                 url: '/register',
@@ -31,21 +31,22 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
                 templateUrl:'template/register/registration-2.html',
                 controller:'registerCtrl'
             })
+
             .state('broadCast',{
             url:'/broadCast',
-            templateUrl:'/shoppingpad-web/template/broadCast.html',
+            templateUrl:'template/broadCast.html',
             controller:'broadCastCtrl'
-        })
+            })
         //this is state for add Customer Screen
-        .state('addCutomer',{
+            .state('addCutomer',{
             url:'/addCustomer',
-            templateUrl:'/shoppingpad-web/template/addCustomer.html',
-            controller:'addCustomerCtrl'
-        })
-        .state('customerDirectory',{
+            templateUrl:'template/Customer/addCustomer.html',
+            controller:'customerCtrl'
+            })
+            .state('customerDirectory',{
             url:'/customerDirectory',
-            templateUrl:'/shoppingpad-web/app/template/customerDirectory.html',
-            controller:'customerDirectoryCtrl'
-        });
+            templateUrl:'template/Customer/customerDirectory.html',
+            controller:'customerCtrl'
+            });
     });
   
