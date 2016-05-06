@@ -1,6 +1,7 @@
 angular.module('shoppingPad').controller('registerCtrl',registerCtrl);
 
-function registerCtrl($scope,registerService,$stateParams,$state) {
+function registerCtrl($scope,registerService,$stateParams,$state,Page) {
+    Page.setTitle('Shoppingpad');
     $scope.getCategory = function () {
         console.log('get category caleef');
         registerService.getAll().then(function (response) {
@@ -13,5 +14,9 @@ function registerCtrl($scope,registerService,$stateParams,$state) {
                 $scope.category = response;
                 $state.go('register-2', {id: id})
             });
+        }
+
+        $scope.login=function(){
+            $state.go('login')
         }
 }
