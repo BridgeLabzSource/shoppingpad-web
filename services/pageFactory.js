@@ -1,7 +1,6 @@
-
 angular.module('shoppingPad').
     factory('Page',function(){
-        var title='default';
+  var title='default';
         return {
             title:function(){
                 return title;

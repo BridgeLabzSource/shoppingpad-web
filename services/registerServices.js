@@ -1,65 +1,53 @@
 (function() {
     angular.module('shoppingPad')
-        .factory('registerService', function ($http,$q) {
+        .factory('registerService', function ($q, $http) {
             //stores json data into category array.
-            var category = [];
-            var cur_category = null;
+            var category = {};
+            var subCaegory = [];
+            var cur_category = {};
+            baseUrl = 'json/dummyJson.json';
             return {
                 //function to get all category
                 getAll: function () {
-                    //calling json data
-                    return $http.get('json/dummyJson.json').then(function (response) {
-                        category = response.data;
-                        return category;
-                    });
-                },
-                // get category by id
-                getUser: function (chatId) {
-                    for (var i = 0; i < category.length; i++) {
-                        console.log(category);
-                        console.log(category.length);
-                        ///TODO
-                        console.log(chatId);
-                        if (category[i].id === parseInt(chatId)) {
-                            return category[i];
-                        }
-                    }
-
-                    return null;
-                },
-                //set category by id
-                setCategory: function (id) {
                     var deferred = $q.defer();
-                    $http({
-                        method:'GET',
-                        url:'json/dummyJson.json',
-                       param:{id:id}
-                    }).success(function (response) {
-                            if (typeof response.id === "number") {
-                                deferred.resolve(response.id);
-                            }else {
-                                deferred.reject(response.id);
-                            }
-                    }).error(function (response) {
-                        deferred.reject(response.id);
-                    });
-
+                    //calling json data
+                    return $http.get(baseUrl).then(function (response) {
+                            category = response.data;
+                            deferred.resolve(category);
                             return deferred.promise;
+                        },
+                        function (error) {
+                            deferred.reject(error);
+                            return deferred.promise;
+                        });
+
+                },
+                //get category by id
+                getSubCategory: function (id) {
+                    console.log('inside subcategory');
+                    var deferred = $q.defer();
+                    return $http.get(baseUrl +'/' + id)
+                        .then(function (response) {
+                            deferred.resolve(
+                             cur_category = response.data);
+                            return deferred.promise;
+                        }
+                        ,function (error) {
+                            deferred.reject(error);
+                            return deferred.promise;
+
+                        });
+
                 }
-
-
             }
-        });
-    //removeCategory:function(id){
-                //  cur_category.remove(id);
-                //},
-
+        })
 })();
+                //setCategory:function(id){
+                //
+                //    console.log('inside setCategory Service');
+                //    if(typeof id==="number"){
+                //        cur_category=id;
+                //    }
+                //}
 
-//(function(){
-//    angular.module('shoppingPad').
-//        factory('registerService',function($resource){
-//           return $resource('http://jsonplaceholder.typicode.com/users/:id',{id:"@id"},{'show':{method:'GET',isArray:false},'query':{method:'GET',isArray:true},'update':{method:'PUT'}});
-//        });
-//})();
 
