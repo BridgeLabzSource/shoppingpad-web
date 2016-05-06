@@ -61,11 +61,6 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
             templateUrl:'template/Customer/customerDirectory.html',
             controller:'customerCtrl'
             })
-        .state('broadCast',{
-            url:'/broadCast',
-            templateUrl:'/shoppingpad-web/template/broadCast.html',
-            controller:'broadCastCtrl'
-        });
     });
 
     

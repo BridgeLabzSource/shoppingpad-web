@@ -43,6 +43,7 @@ function customerCtrl($scope, customerService) {
   
   $scope.profilePictureSelected = function(data){
     console.log(data.files[0]);
+    
   };
 
 } //end of controller
