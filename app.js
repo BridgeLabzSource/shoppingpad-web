@@ -1,13 +1,7 @@
 
 angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate','ngAria','ngMessages'])
-.run(['$window', '$rootScope',
-    function ($window ,  $rootScope) {
-        $rootScope.goBack = function(){
-            $window.history.back();
-        }
-    }])
-    .config(function ($stateProvider,$urlRouterProvider){
-       $urlRouterProvider.otherwise('/');
+    .config(function ($stateProvider,$urlRouterProvider) {
+        $urlRouterProvider.otherwise('/addCustomer');
         $stateProvider
             .state('home',{
                 url:'/',
@@ -20,6 +14,14 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
                 controller:'registerCtrl'
 
             })
+            .state('dashboard',{
+                url:'/dashboard',
+                templateUrl: 'template/dashBoard/dashBoard.html',
+                controller:'dashBoardController'
+        })
+
+
+
             .state('register.detail',{
                 url:'/register/{categoryId:[0-9]{1-5}}',
                 templateUrl:'template/register/registration-2.html',
@@ -46,6 +48,13 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
             url:'/customerDirectory',
             templateUrl:'template/customerDirectory.html',
             controller:'customerDirectoryCtrl'
-        });
+        })
+
+        .state('broadCast',{
+            url:'/broadCast',
+            templateUrl:'/shoppingpad-web/template/broadCast.html',
+            controller:'broadCastCtrl'
+        })
+
 
     })
