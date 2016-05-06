@@ -1,0 +1,42 @@
+<!--content-->
+    <div>
+        <h3 class="Please-wait-for-One">Please wait for One Time Password!</h3>
+        <p class="We-have-sent-an-OTP ">we have sent an OTP on your registered mobile no</p>
+        <div style="margin-top: 30px">
+            <form name="myForm" ng-app="shoppingPad" class="container-fluid myLoginForm" ng-submit="submit()" >
+                <div class="row" class="loginOTP">
+                    <div class="col-xs-8" style="height: 74px;">
+                        <md-input-container>
+                            <md-icon md-svg-icon="assets/images/device.svg"></md-icon>
+                            <input type="number" placeholder="Enter registered mobile no" name="name" id="name" ng-model="mobile">
+                        </md-input-container>
+                    </div>
+                    <div class="col-xs-8" style="height: 74px;">
+                        <md-input-container>
+                            <md-icon md-svg-icon="assets/images/lock.svg"></md-icon>
+                            <input type="password" placeholder="Enter 3-D secure pin" name="security" id="security" ng-model="password">
+                        </md-input-container>
+                    </div>
+                    <div class="col-xs-8" style="height: 74px;">
+                        <md-input-container class="loginFormEachInput">
+                            <md-icon md-svg-icon="assets/images/lock.svg"></md-icon>
+                            <input type="password" placeholder="Enter OTP" name="OTP" id="OTP" ng-model="OTP" ng-required="true" minlength="6">
+                            <div ng-messages="myForm.name.$error">
+                                <div ng-message="required">Enter Pin no(6-digit).</div>
+                            </div>
+                        </md-input-container>
+                    </div>
+                </div>
+                <div>
+                    <p  style="text-align: center">Timer</p>
+                    <h3></h3>
+                </div>
+                <div>
+                    <md-toolbar style="margin-top: 160px;">
+                        <md-button class="md-primary" ng-disabled="myForm.$invalid" style="margin-top: 15px" ng-click="loginOTP()">LOGIN</md-button>
+
+                    </md-toolbar>
+                </div>
+            </form>
+        </div>
+    </div>

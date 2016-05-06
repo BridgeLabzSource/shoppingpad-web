@@ -1,0 +1,41 @@
+<div id="Rectangle-541">
+	<md-icon md-svg-src="./assets/images/csv.svg" class="ic_cloud_download_black_24px"></md-icon>
+	<md-button class="Upload-CSV-from-mem">Upload .CSV From Memory</md-button>
+</div>
+<div id="Rectangle-542">
+	<md-icon md-svg-src="./assets/images/phonebook.svg" class="ic_perm_device_information_black_24px "></md-icon>
+	<md-button class="Add-from-phonebook ">Add From PhoneBook</md-button>
+</div>
+<div id="seprate">
+	<p>OR</p>
+</div>
+
+<!--Form to get Customer Name And number-->
+<form name="customer">
+<div layout-gt-sm="row">
+
+<!--Name-->
+	<md-input-container class="md-icon-float md-block">
+	<label style="margin-left: 12px;"  >Enter Customer Name</label>
+	<md-icon md-svg-src="./assets/images/customerName.svg" class="ic_assignment_ind_black_24px"></md-icon>
+	<input name="name" id="name" style="margin-left: 12px;" ng-model="name" ng-minlength="4" ng-pattern="/^[a-zA-Z][a-zA-Z\\s]+$/" required >
+	 <p ng-show="customer.name.$invalid " class="help-block"></p>
+</md-input-container>
+<!--=============================-->
+</div>
+
+<div layout-gt-sm="row">
+<!--Number-->
+	<md-input-container class="md-icon-float md-block">
+	<label style="margin-left: 12px;">Enter Customer Mobile</label>
+	<md-icon md-svg-src="./assets/images/device.svg" class="ic_perm_device_information_black_24px "></md-icon>
+	<input name="number" id="number"  style="margin-left: 12px;"ng-model="number"  ng-pattern="/^(\+){0,1}91(\-){0,1}\d[0-9]{9}$/" required>
+</md-input-container>
+<!--==============================================-->
+</div>
+<div class="Bottom">
+	<md-button class="md-button ADD-CUSTOMER" ng-disabled="customer.$invalid" ng-click="addCustomer()">
+	Add Customer
+</md-button>
+</div>
+</form>   

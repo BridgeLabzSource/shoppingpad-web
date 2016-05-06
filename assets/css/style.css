@@ -1,24 +1,4 @@
 
-/*.app-bar-bg {*/
-    /*width: 360px;*/
-    /*height: 80px;*/
-    /*/!*background-color: #9013fe;*!/*/
-
-/*}*/
-
-/*.status-bar-bg {*/
-    /*width: 360px;*/
-    /*height: 24px;*/
-    /*background-color: #9013fe;*/
-
-/*}*/
-
-/*.Rectangle-409 {*/
-    /*width: 360px;*/
-    /*height: 48px;*/
-    /*background-color: #9013fe;*/
-   /*margin-top:300px;*/
-/*}*/
 .screen-bg {
     width: 360px;
     margin: auto;
@@ -78,30 +58,18 @@
     margin-top: 550px;
     color: #000000;
 }
-
-/*registration-1.html*/
-/*select-category*/
-.Select-Category {
-    width: 131px;
-    height: 25px;
-    font-family: Avenir-Medium;
-    font-size: 18px;
-    color: #000000;
-    margin-top:23px;
-    margin-left: 115px;
+.Rectangle-602 {
+  width: 360px;
+  height: 72px;
+  background-color: #fff1b5;
 }
-/*-------------------------------------------------------------------------------------------------------------------------*/
-/*rectangle*/
-
-.Rectangle-425 {
-    width: 170px;
-    height: 36px;
-    border-radius: 3px;
-    background-color: #e9e9e9;
-    margin-right: 10px;
-   padding-top: 6px;
-    padding-left: 12px;
-
+#Rectangle-541 {
+    margin-left: 16px;
+    margin-top: 18px;
+  width: 328px;
+  height: 56px;
+  border-radius: 3px;
+  border:1px solid #9013fe
 }
 .AUTOMOTIVE {
     width: 107px;
@@ -116,113 +84,73 @@
     object-fit: contain;
     padding-bottom: 6px;
 
-}
-.Rectangle-425-Copy {
-    width: 149px;
-    height: 36px;
-    border-radius: 3px;
-    background-color: #e9e9e9;
-    padding-top:8px;
-    padding-left: 10px;
-}
-.ic_add_black_24px-copy {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-}
-.REAL-ESTATE {
-    width: 99px;
-    height: 22px;
-    font-family: Avenir-Medium;
-    font-size: 16px;
-    color: #000000;
-}
-.Rectangle-425-Copy-2 {
-    width: 102px;
-    height: 36px;
-    border-radius:3px;
-    background-color:#e9e9e9;
-    margin-top:16px;
-    margin-left:16px;
-    padding-top:8px;
-    padding-left:12px;
-}
-.RETAIL {
-    width: 52px;
-    height: 22px;
-    font-family: Avenir-Medium;
-    font-size: 16px;
-    color: #000000;
-
-}
-.ic_add_black_24px-copy-2 {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    padding-right: 8px;
-}
-
-
-.Terms-Conditions {
-    width: 123px;
-    height: 19px;
-    font-family: cursive;
-    font-size: 14px;
-    color: #9013fe;
-    margin-top:200px;
-    margin-left:119px;
-
-}
-/*--------------------------------------------------------------------------------------------------------------------*/
-
-/*registration-2*/
-
-.Select-Sub-category {
-    width: 164px;
-    height: 25px;
-    font-family: Avenir-Medium;
-    font-size: 18px;
-    color: #000000;
-    margin-left: 80px;
-}
-.Rectangle-425-Copy-3 {
-    width: 102px;
-    height: 36px;
-    border-radius: 3px;
-    background-color: #650eb1;
-
-}
-.Path-625 {
-    width: 320px;
-    height: 0px;
-    border: solid 1px #e0e0e0;
-    margin-top:14.6px;
-
-}
-.Rectangle-4251 {
-    width: 154px;
-    height: 36px;
-    border-radius: 3px;
-    background-color: #f8cd1c;
-    margin-top: 19.4px;
+    margin-top:18px;
     margin-left: 16px;
+  width: 328px;
+  height: 56px;
+  border-radius: 3px;
+  border:1px solid #9013fe
 }
-.Rectangle-425-Copy-4 {
-    width: 129px;
-    height: 36px;
-    border-radius: 3px;
-    background-color: #e9e9e9;
-    margin-top:19.4px;
+#seprate{
+    margin-top: 50px;
+    margin-left: 155px;
 }
-.Rectangle-4252 {
-    width: 159px;
-    height: 36px;
-    border-radius: 3px;
-    background-color: #e9e9e9;
-    padding-top: 6px;
-    padding-left: 12px;
-    margin-top: 16px;
 
+.ic_assignment_ind_black_24px {
+    margin-left: 16px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.ic_perm_device_information_black_24px {
+    margin-left: 16px;
+    margin-top: 0px;
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.Upload-CSV-from-mem {
+    margin-left: 15px;
+    margin-top: 15px;
+  font-size: 16px;
+  color: #9013fe;
+}
+.Add-from-phonebook {
+    margin-top: 15px;
+    margin-left: 16px;
+  
+  font-size: 16px;
+  color: #9013fe;
+   
+}
+.ic_cloud_download_black_24px {
+    margin-top: 0px;
+    margin-left: 16px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+#line{
+
+    margin-top:18px;
+    margin-left: 16px;
+   width: 144px;
+  height: 1px;
+  border:1px solid #9013fe;
+}
+.Bottom { 
+    margin-top: 85px;
+  width: 360px;
+  height: 48px;
+  background-color: #9013fe;
+}
+.ADD-CUSTOMER {
+    margin-left: 115px;
+  width: 130px;
+  height: 22px;
+
+  font-size: 14px;
+  color: #ffffff;
 }
 .Rectangle-425-Copy-31 {
     width: 129px;
@@ -370,7 +298,7 @@
     margin: 0;
     transition: background 0.15s linear;
     display: block; }
-.chipsdemoBasicUsage .custom-chips .md-chip .md-chip-remove-container button.vegetablechip md-icon {
+.chipsdemoBasicUsage .custom-chips .md-chip .md-chip-remove-container button.vegetablechip  {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -387,4 +315,65 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-/*//md-chip-template*/
+
+.Please-wait-for-One {
+    width: 322px;
+    height: 25px;
+    font-family: Avenir-Medium;
+    font-size: 19px;
+    color: #000000;
+    text-align: center;
+    margin-left: 19px;
+}
+
+.We-have-sent-an-OTP {
+    width: 294px;
+    height: 38px;
+    font-family: Avenir-Book;
+    font-size: 16px;
+    color: #000000;
+    text-align: center;
+    margin-top:-15px;
+    margin-left: 33px;
+    margin-right: 33px;
+;
+}
+
+.Welcome-to-ShoppingP {
+    width: 212px;
+    height: 25px;
+    font-family: Avenir-Medium;
+    font-size: 18px;
+    color: #000000;
+    margin-left: 74px;
+}
+
+.myForm {
+    margin-top: 111px;
+}
+
+.anurag {
+    margin-left: 16px
+}
+.loginOTP{
+    margin-left: 16px;
+}
+
+.loginFormEachInput{
+    height: 74px;
+
+}
+
+.myLoginForm{
+    margin-top: 76px;
+}
+
+.Timer {
+    width: 36px;
+    height: 19px;
+    font-family: Avenir-Book;
+    font-size: 14px;
+    text-align: center;
+    color: #000000;
+    margin-top: 33px;
+}
