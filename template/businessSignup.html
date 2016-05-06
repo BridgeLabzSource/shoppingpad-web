@@ -1,6 +1,6 @@
 
             <md-content>
-                <p class="Welcome-to-Shoppingpad">Welcome to Shoppingpad</p>
+                <p class="Welcome-to-Shoppingp">Welcome to Shoppingpad</p>
 
                 <p class="To-list-your-busines">To list your business we need following details:</p>
                 <form name="myForm" ng-app="shoppingPad" ng-controller="businessCtrl" class="container-fluid"
@@ -20,11 +20,11 @@
                         <div class="col-xs-8">
                             <md-input-container class="Path-688">
                                 <md-icon md-svg-icon="assets/images/assignment.svg"></md-icon>
-                                <md-select name="myselect" id="myselect" placeholder="Create your business URL" ng-model="obj.myselect"
+                                <md-select name="select" id="myselect" placeholder="Create your business URL" ng-model="obj.select"
                                            ng-required="true">
                                     <md-option ng-repeat="o in options" ng-value="o">{{o}}</md-option>
                                 </md-select>
-                                <div ng-messages="myForm.myselect.$error">
+                                <div ng-messages="myForm.select.$error">
                                     <div ng-message="required">URL is required.</div>
                                 </div>
                             </md-input-container>

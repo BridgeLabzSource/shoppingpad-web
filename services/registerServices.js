@@ -1,42 +1,53 @@
 (function() {
     angular.module('shoppingPad')
-        .factory('registerService', function ($http) {
+        .factory('registerService', function ($q, $http) {
             //stores json data into category array.
-            var category = [];
-            var cur_category=null;
+            var category = {};
+            var subCaegory = [];
+            var cur_category = {};
+            baseUrl = 'json/dummyJson.json';
             return {
                 //function to get all category
                 getAll: function () {
+                    var deferred = $q.defer();
                     //calling json data
-                    return $http.get('json/dummyJson.json').then(function(response) {
-                        category = response.data;
-                        return category;
-                    });
+                    return $http.get(baseUrl).then(function (response) {
+                            category = response.data;
+                            deferred.resolve(category);
+                            return deferred.promise;
+                        },
+                        function (error) {
+                            deferred.reject(error);
+                            return deferred.promise;
+                        });
+
                 },
-                // get category by id
-                getUser: function (chatId) {
-                    for (var i = 0; i < category.length; i++) {
-                        console.log(category);
-                        console.log(category.length);
-                      ///TODO
-                        console.log(chatId);
-                        if(category[i].id === parseInt(chatId)) {
-                            return category[i];
+                //get category by id
+                getSubCategory: function (id) {
+                    console.log('inside subcategory');
+                    var deferred = $q.defer();
+                    return $http.get(baseUrl +'/' + id)
+                        .then(function (response) {
+                            deferred.resolve(
+                             cur_category = response.data);
+                            return deferred.promise;
                         }
-                    }
+                        ,function (error) {
+                            deferred.reject(error);
+                            return deferred.promise;
 
-                    return null;
-                },
-                //set category by id
-                setCategory:function(id){
+                        });
 
-                    console.log('inside setCategory Service');
-                    if(typeof id==="number"){
-                        cur_category=id;
-                    }
                 }
-
             }
-        });
+        })
 })();
+                //setCategory:function(id){
+                //
+                //    console.log('inside setCategory Service');
+                //    if(typeof id==="number"){
+                //        cur_category=id;
+                //    }
+                //}
+
 

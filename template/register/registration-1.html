@@ -5,8 +5,8 @@
         <div flex="120" flex-md="90" flex-sm="95" layout="row" layout-wrap style="height: 103px;" ng-init="getCategory()">
             <div flex="45" class="Rectangle-425" ng-repeat="cat in category">
                 <span class="AUTOMOTIVE">{{cat.name}} </span>
-                <a ui-sref="register-2"><md-icon  class="ic_add_black_24px" md-svg-src="{{cat.icon}}"></md-icon>
-                </a>
+               <md-icon ng-click="subCategory(cat.id)" class="ic_add_black_24px" md-svg-src="{{cat.icon}}"></md-icon>
+
             </div>
         </div>
     </div>
