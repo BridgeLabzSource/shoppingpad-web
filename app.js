@@ -1,4 +1,3 @@
-
 angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate','ngAria','ngMessages'])
     .config(function ($stateProvider,$urlRouterProvider) {
         $urlRouterProvider.otherwise('/addCustomer');
@@ -12,7 +11,23 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
                 url:'/register',
                 templateUrl:'template/register/registration-1.html',
                 controller:'registerCtrl'
+            })
 
+            .state('register-1', {
+                url: '/register1',
+                templateUrl: 'template/register/registration-1.html',
+                controller: 'registerCtrl'
+            
+            //signIn States
+            }).state('loginOTP', {
+                url: '/loginOTP',
+                templateUrl: 'template/signin/loginOTP.html',
+                controller: 'loginOTPCtrl'
+            }).
+            state('login', {
+                url: '/login',
+                templateUrl: 'template/signin/login.html',
+                controller: 'loginController'
             })
             .state('dashboard',{
                 url:'/dashboard',
