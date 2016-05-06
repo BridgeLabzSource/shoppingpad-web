@@ -12,42 +12,32 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
                 templateUrl:'template/register/registration-1.html',
                 controller:'registerCtrl'
             })
-
-            .state('register-1', {
-                url: '/register1',
-                templateUrl: 'template/register/registration-1.html',
-                controller: 'registerCtrl'
-            
-            //signIn States
-            }).state('loginOTP', {
-                url: '/loginOTP',
-                templateUrl: 'template/signin/loginOTP.html',
-                controller: 'loginOTPCtrl'
-            }).
-            state('login', {
-                url: '/login',
-                templateUrl: 'template/signin/login.html',
-                controller: 'loginController'
-            })
-            .state('dashboard',{
-                url:'/dashboard',
-                templateUrl: 'template/dashBoard/dashBoard.html',
-                controller:'dashBoardController'
-        })
-
-
-
             .state('register.detail',{
                 url:'/register/{categoryId:[0-9]{1-5}}',
                 templateUrl:'template/register/registration-2.html',
                 controller:'registerCtrl'
             })
             .state('business',{
-              url:'/business',
+                url:'/business',
                 templateUrl:'template/businessSignup.html',
-                controller:'businessCtrl',
+                controller:'businessCtrl'
 
             })
+            . state('login', {
+            url: '/login',
+            templateUrl: 'template/signin/login.html',
+            controller: 'loginController'
+             })
+             .state('loginOTP', {
+                url: '/loginOTP',
+                templateUrl: 'template/signin/loginOTP.html',
+                controller: 'loginOTPCtrl'
+            })
+            .state('dashboard',{
+                url:'/dashboard',
+                templateUrl: 'template/dashBoard/dashBoard.html',
+                controller:'dashBoardController'
+           })
             .state('broadCast',{
             url:'/broadCast',
             templateUrl:'template/broadCast.html',
@@ -65,4 +55,4 @@ angular.module('shoppingPad',['ngResource','ngMaterial','ui.router','ngAnimate',
             controller:'customerDirectoryCtrl'
         })
 
-    })
+    });
