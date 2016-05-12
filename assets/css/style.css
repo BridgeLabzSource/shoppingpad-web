@@ -1,31 +1,4 @@
-/*.screen-bg {*/
-    /*width: 360px;*/
-    /*margin: auto;*/
-    /*/!*margin-top: 30px;*!/*/
-    /*height: 640px;*/
-    /*box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.1);*/
 
-/*}*/
-/*.app-bar-bg {*/
-    /*width: 360px;*/
-    /*height: 80px;*/
-    /*/!*background-color: #9013fe;*!/*/
-
-/*}*/
-
-/*.status-bar-bg {*/
-    /*width: 360px;*/
-    /*height: 24px;*/
-    /*background-color: #9013fe;*/
-
-/*}*/
-
-/*.Rectangle-409 {*/
-    /*width: 360px;*/
-    /*height: 48px;*/
-    /*background-color: #9013fe;*/
-   /*margin-top:300px;*/
-/*}*/
 .screen-bg {
     width: 360px;
     margin: auto;
@@ -160,6 +133,12 @@
 
 }
 #Rectangle-542{
+     margin-left: 16px;
+    margin-top: 18px;
+    width: 328px;
+    height: 56px;
+    border-radius: 3px;
+    border:1px solid #9013fe
 
 }
 .Select-Category {
@@ -237,14 +216,15 @@
     border:1px solid #9013fe;
 }
 .Bottom {
-    margin-top: 85px;
+    margin-top: 105px;
     width: 360px;
     height: 48px;
     background-color: #9013fe;
 }
+
+
 .ADD-CUSTOMER {
     margin-left: 115px;
-<<<<<<< HEAD
   width: 130px;
   height: 22px;
 
@@ -262,12 +242,8 @@
 #scrollA{
   height:560px;
   /*width: 360px;*/
-=======
-    width: 130px;
-    height: 22px;
 
-    font-size: 14px;
-    color: #ffffff;
+  
 }
 .Rectangle-425-Copy-31 {
     width: 129px;
@@ -516,5 +492,11 @@ input[type=number]::-webkit-outer-spin-button {
     color: #000000;
     margin-top: 33px;
 
->>>>>>> 3c059ecb99328b8d3539212e6806f2d3ad81bf8a
+}
+#bounds {
+    margin-top: 10px;
+    margin-left: 270px;
+ font-size: 12px;
+  width: 90px;
+  height: 14px;
 }

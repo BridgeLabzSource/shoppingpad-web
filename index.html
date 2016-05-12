@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css"/>
-    <script
-              src="https://code.jquery.com/jquery-2.2.3.min.js"
-              integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
-              crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 </head>
-<body ng-app="shoppingPad" ng-controller="mainCtrl">
-<!--Complete layout-->
-<div layout-lt-lg="row" class="screen-bg">
-    <div flex-lt-lg="100">
-        <!--header-->
-        <md-toolbar class="app-bar-bg" style="background-color: #9013fe;">
-            <div class="status-bar-bg"></div>
-            <div class="md-toolbar-tools">
-<<<<<<< HEAD
 
-                <md-button class="md-icon-button" aria-label="Settings">
-                    <!--<md-icon md-svg-icon="app/images/back1.svg"></md-icon>-->
-                </md-button>
-=======
-                <md-icon back ng-click="goBack()" class="back" md-svg-src="assets/images/back.svg"></md-icon>
->>>>>>> 3c059ecb99328b8d3539212e6806f2d3ad81bf8a
-                <h2>
+<body ng-app="shoppingPad" ng-controller="mainCtrl">
+    <!--Complete layout-->
+    <div layout-lt-lg="row" class="screen-bg">
+        <div flex-lt-lg="100">
+            <!--header-->
+            <md-toolbar class="app-bar-bg" style="background-color: #9013fe;">
+                <div class="status-bar-bg">
+                    <div id="bounds" ng-controller="headerCloackCtrl">
+                        {{h}}:{{m}}:{{s}}
+                    </div>
+                </div>
+                <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="Settings">
+                    </md-button> 
+                    <md-icon back ng-click="goBack()" class="back" md-svg-src="assets/images/back.svg"></md-icon>
+                    <h2>
                     <span class="ShoppingPad">{{ Page.title() }}</span>
                 </h2>
-                <span flex=""></span>
-<<<<<<< HEAD
-                <md-button class="md-icon-button" aria-label="Favorite">
-                    <!--<md-icon md-svg-icon="app/images/a.svg"></md-icon>-->
-                </md-button>
-=======
-
->>>>>>> 3c059ecb99328b8d3539212e6806f2d3ad81bf8a
+                    <span flex=""></span>
+                    <md-button class="md-icon-button" aria-label="Favorite">
+                        <md-icon md-svg-icon="./assets/images/a.svg"></md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <!--content-->
+            <div>
+                <md-content>
+                    <ui-view></ui-view>
+                </md-content>
             </div>
-        </md-toolbar>
-        <!--content-->
-        <div>
-            <md-content>
-
-                <ui-view></ui-view>
-            </md-content>
-
         </div>
     </div>
-</div>
+
 <!--dependencies-->
 <script src="bower_components/angular/angular.js" type="text/javascript"></script>
 <script src="bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>
@@ -61,7 +53,7 @@
 <!--main script file-->
 <script src="app.js"></script>
 <!--controllers-->
-<<<<<<< HEAD
+
 <script src="controller/dashBoardController.js"></script>
 <script src="controller/registerCtrl.js"></script>
 <script src="controller/loginController.js"></script>
@@ -69,34 +61,20 @@
 <script src="controller/customerCtrl.js"></script>
 <script src="controller/loginOTPCtrl.js"></script>
 <script src="controller/mainCtrl.js"></script>
+<script src="controller/homeCtrl.js"></script>
+<script src="controller/businessCtrl.js"></script>
+<script src="controller/headerCloackCtrl.js"></script>
 
 <!--shoppingpad services js files-->
 <script src="services/broadCastService.js"></script>
 <script src="services/registerServices.js"></script>
 <script src="services/customerService.js"></script>
 <script src="services/loginServices.js"></script>
-=======
-<script src="controller/homeCtrl.js"></script>
-<script src="controller/registerCtrl.js"></script>
-<script src="controller/loginCtrl.js"></script>
-<script src="controller/businessCtrl.js"></script>
-<script src="controller/broadCastCtrl.js"></script>
-
-<script src="controller/mainCtrl.js"> </script>
-<!--directives-->
-<script src="directives/backButton.js"></script>
-<!--shoppingpad services js files-->
-<script src="services/broadCastService.js"></script>
-<script src="services/registerServices.js"></script>
 <script src="services/businessService.js"></script>
->>>>>>> 3c059ecb99328b8d3539212e6806f2d3ad81bf8a
 <script src="services/pageFactory.js"></script>
 
-
-
-<!--services-->
-
+<!--directives-->
+<script src="directives/backButton.js"></script>
 
 </body>
 </html>
-
