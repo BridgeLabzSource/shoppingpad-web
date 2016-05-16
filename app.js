@@ -34,7 +34,7 @@
                     controller: 'registerCtrl'
                 })
                 .state('app.home.register3', {
-                    url: "/register/:id",
+                    url: "/register/{categoryId:[0-9]{1,5}}",
                     templateUrl: 'template/register/registration-2.html',
                     controller: 'registerCtrl'
                 })

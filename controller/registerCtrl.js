@@ -21,7 +21,7 @@
                 if (!id) return;
                 registerService.getSubCategory(id).then(function(data) {
                     $scope.cur_category = category.cur_category;
-                    $state.go('register.detail', {'categoryId': id})
+                    $state.go('app.home.register3', {'categoryId': id})
                 });
 
             }
