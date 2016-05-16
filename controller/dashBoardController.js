@@ -1,3 +1,5 @@
-angular.module('shoppingPad').controller('dashBoardController',function(){
+(function() {
+    angular.module('shoppingPad').controller('dashBoardController', function () {
 
-});
+    });
+})();

@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" type="text/css">
     <link rel="stylesheet" href="assets/css/style.css"/>
-    <script
-              src="https://code.jquery.com/jquery-2.2.3.min.js"
-              integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="
-              crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"
+            integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
 </head>
 <body ng-app="shoppingPad" ng-controller="mainCtrl">
 <!--Complete layout-->
@@ -17,21 +14,18 @@
         <md-toolbar class="app-bar-bg" style="background-color: #9013fe;">
             <div class="status-bar-bg"></div>
             <div class="md-toolbar-tools">
-                <md-icon back ng-click="goBack()" class="back" md-svg-src="assets/images/back.svg"></md-icon>
+                <!--<md-icon back class="back" md-svg-src="assets/images/back.svg"></md-icon>-->
                 <h2>
                     <span class="ShoppingPad">{{ Page.title() }}</span>
                 </h2>
                 <span flex=""></span>
-
             </div>
         </md-toolbar>
         <!--content-->
         <div>
             <md-content>
-
                 <ui-view></ui-view>
             </md-content>
-
         </div>
     </div>
 </div>
@@ -44,17 +38,18 @@
 <script src="bower_components/angular-messages/angular-messages.min.js"></script>
 <script src="bower_components/angular-material-icons/angular-material-icons.js"></script>
 <script src="bower_components/angular-resource/angular-resource.min.js"></script>
-
 <!--main script file-->
 <script src="app.js"></script>
 <!--controllers-->
 <script src="controller/homeCtrl.js"></script>
 <script src="controller/registerCtrl.js"></script>
-<script src="controller/loginCtrl.js"></script>
+<!--<script src="controller/loginCtrl.js"></script>-->
 <script src="controller/businessCtrl.js"></script>
 <script src="controller/broadCastCtrl.js"></script>
-
-<script src="controller/mainCtrl.js"> </script>
+<script src="controller/mainCtrl.js"></script>
+<script src="controller/loginController.js"></script>
+<script src="controller/loginOTPCtrl.js"></script>
+<script src="controller/customerCtrl.js"></script>
 <!--directives-->
 <script src="directives/backButton.js"></script>
 <!--shoppingpad services js files-->
@@ -62,6 +57,8 @@
 <script src="services/registerServices.js"></script>
 <script src="services/businessService.js"></script>
 <script src="services/pageFactory.js"></script>
+<script src="services/loginServices.js"></script>
+<script src="services/customerService.js"></script>
 </body>
 </html>
 

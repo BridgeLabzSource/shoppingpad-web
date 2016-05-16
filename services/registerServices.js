@@ -5,10 +5,10 @@
             var category = {};
             var subCaegory = [];
             var cur_category = {};
-            baseUrl = 'json/dummyJson.json';
+            baseUrl = 'http://localhost:4000/category';
             return {
                 //function to get all category
-                getAll: function () {
+                getAllCategory: function () {
                     var deferred = $q.defer();
                     //calling json data
                     return $http.get(baseUrl).then(function (response) {

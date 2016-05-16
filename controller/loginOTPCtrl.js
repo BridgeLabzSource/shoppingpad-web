@@ -9,7 +9,7 @@ function loginCtrl1($scope,loginServices,$state) {
         $scope.password=users[0].password;
 
         $scope.loginOTP= function () {
-            $state.go('dashboard')
+            $state.go('app.dashboard.step1')
         }
     });  //gettin values from login services
 

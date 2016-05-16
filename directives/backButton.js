@@ -4,12 +4,9 @@ angular.module('shoppingPad')
      restrict:'A',
      link:function(scope,elem,attrs){
          elem.bind('click',function(){
-             if($state === 'home'){
-                 event.preventDefault()
-             }
-             else {
+
                  $window.history.back();
-             }
+
          });
      }
  };

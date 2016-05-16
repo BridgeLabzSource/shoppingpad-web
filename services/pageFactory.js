@@ -1,3 +1,4 @@
+(function(){
 angular.module('shoppingPad').
     factory('Page',function(){
   var title='default';
@@ -11,3 +12,4 @@ angular.module('shoppingPad').
             }
         };
     });
+})();

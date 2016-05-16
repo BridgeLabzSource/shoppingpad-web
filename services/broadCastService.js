@@ -1,4 +1,5 @@
-//restfull call to get list of all broad cast
+//restful call to get list of all broad cast
+(function(){
 angular.module('shoppingPad').service('broadCastService',broadCastService);
 //used $http service get data.
 function broadCastService($http,$q){
@@ -18,3 +19,4 @@ function broadCastService($http,$q){
 		});
 	};//end of function
 }//end of service
+})();

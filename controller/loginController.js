@@ -1,14 +1,3 @@
-//angular.module('shoppingPad').controller('loginCtrl',loginCtrl);
-//y
-//function loginCtrl($scope,$stateParams,$state,loginServices) {
-//    $scope.login=function(mob,pin)
-//    {
-//        loginServices.login(mob,pin).then(function(){
-//            $state.go('login') //move to next state
-//        })
-//    }
-//}
-
 angular.module('shoppingPad').controller('loginController',loginCtrl);
 
     function loginCtrl($scope,$state,loginServices,Page){
@@ -31,7 +20,7 @@ angular.module('shoppingPad').controller('loginController',loginCtrl);
             //passin data to loginServices and sending to next state
             loginServices.setUser(user).then(function(response){
                 //$scope.data=response;
-            $state.go('loginOTP');
+            $state.go('app.login.step2');
 
             });
 

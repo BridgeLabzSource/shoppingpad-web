@@ -8,16 +8,18 @@
         //sending data on submit function
             $scope.submit = function () {
                 //array of option
-                $scope.options = ['Option 1', 'Option 2', 'Option 3', 'Option 4', '...'];
+               alert('inside submit function');
                 //saving data into user variable
                 var user = {
-                    title: $scope.name,
+                    name: $scope.name,
                     url: $scope.url,
-                    select: $scope.select,
+                    email: $scope.email,
                     location: $scope.location
                 };
-                businessService.businessSignup(user).then(function (response) {
+                console.log(user);
+                businessService.businessSignUp(user).then(function (response) {
                         if (response == 200) {
+                            console.log(user);
                             alert('user saved');
                         }
                     },
