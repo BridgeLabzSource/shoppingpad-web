@@ -6,6 +6,8 @@ function broadCast($scope,broadCastService,Page){
 	alert("broad Cast");
 	//call getBroadCasts function of broadCastService
 	broadCastService.getBroadCasts().then(function(data){
+        alert("in success")
+		alert(data.data)
 		alert(data);
 		//get broadCast in an array
         $scope.broadCasts=data;

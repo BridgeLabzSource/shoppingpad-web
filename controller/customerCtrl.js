@@ -3,7 +3,7 @@ angular.module('shoppingPad').controller('customerCtrl', customerCtrl);
 //inject customerService to this controller for different customer services
 //Page is another service injected to set title of page using Page Service's setTitle method
 
-function customerCtrl($state,$scope,customerService,Page) {
+function customerCtrl($http,$state,$scope,customerService,Page) {
 
     //check current state and set page title accordingly
     if($state.current.name=='addCustomer'){
@@ -13,9 +13,6 @@ function customerCtrl($state,$scope,customerService,Page) {
      Page.setTitle('Directory');
     }
         //set page title as a Customer Directory.
-
-
-
     //this is addCustomer function which will get invoked on add Customer button in Add Customer Screen
     $scope.addCustomer = function() {
         //this is customer array having two fields customer number and customer phone number

@@ -6,7 +6,7 @@ function broadCastService($http,$q){
 	var deferred=$q.defer();//this is deferred object for asyc call
 	this.getBroadCasts=function(){
 
-		return $http.get('http://localhost:3011/api/getCustomers').then(function(response){
+		return $http.get('http://localhost:3002/customers/get').then(function(response){
 			//resovle the promise with data in response object retrived by http
 			deferred.resolve(response.data);
 			return deferred.promise;//return promis

@@ -18,9 +18,3 @@ function loginCtrl1($scope,loginServices,$state) {
 
 }
 
-
-
-
-11 teas
-6 coffee
-1 khamba

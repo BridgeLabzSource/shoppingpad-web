@@ -11,7 +11,7 @@ function customerService($q,$http){
 		alert("inside Service"+JSON.stringify(customer))
 		return $http({
 			method:'POST',
-			url:'http://localhost:3042/addCustomer',
+			url:'http://localhost:3003/customers',
 			data:customer,
 			header:{'Content-Type': 'application/x-www-form-urlencoded'}
 		}).then(function(response){
@@ -33,13 +33,16 @@ function customerService($q,$http){
 	//this is function to get Customers
 	this.getCustomer=function(){
 		alert("inside getCustomer");
-		return $http.get('http://localhost:3011/api/getCustomers').then(function(response){
+		return $http.get('http://localhost:3003/customers/get').then(function(response){
 			deferred.resolve(response.data);
 			return deferred.promise;
 		},
 		function(error){
+			alert("promise rejected");
 			deferred.reject(error);
 			return deferred.promise;
 		});
+
+		
 	};//end of getCustomer function
 }//end of customer Service
