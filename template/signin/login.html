@@ -4,7 +4,7 @@
             <p class="Welcome-to-ShoppingP">Welcome to ShoppingPad</p>
             <div>
                 <form name="myForm" ng-app="shoppingPad" class="myForm" ng-submit="submit()">
-                    <div class="row anurag" >
+                    <div class="row formData" >
                         <div class="col-xs-8">
                             <md-input-container>
                                 <md-icon md-svg-icon="assets/images/device.svg"></md-icon>
@@ -30,7 +30,7 @@
 
                     <!-- login toolbar-->
                     <div>
-                    <md-toolbar style="margin-top: 175px;">
+                    <md-toolbar class="loginToolBar">
                         <md-button class="md-primary" ng-disabled="myForm.$invalid" style="margin-top: 15px;outline: none;" ng-click="login()">LOGIN</md-button>
                     </md-toolbar>
                     </div>

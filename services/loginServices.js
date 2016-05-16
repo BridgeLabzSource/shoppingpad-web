@@ -1,59 +1,3 @@
-//(function() {
-//    angular.module('shoppingPad')
-//        .factory('loginServices', function ($http,$q){
-
-
-//            console.log('inside services');
-//            var user={},
-//                mobile=null,
-//                password=null,
-//                OTP=null;
-//
-//
-//            return{
-//
-//                setMobile:function(data){
-//
-//                    return $q(function(resolve,reject){
-//                        if(data) {
-//
-//                            resolve(data);
-//                        }
-//                        reject("data is not same");
-//                    })
-//                },
-//
-//                //setPassword:function(data){
-//                //    console.log("password set");
-//                //    password=data;
-//                //},
-//                //login:function(mob,pass)
-//                //{
-//                //    mobile=mob;
-//                //    password=pass;
-//                //},
-//                //verifyOTP:function(data)
-//                //{
-//                //    return $q(function(resolve,reject){
-//                //
-//                //            if(data==5) resolve("data is 5");
-//                //            reject("dat is not 5");
-//                //    });
-//                //},
-//                //resendOTP:function(){
-//                //
-//                //}
-//
-//                getMobile:function(data){
-//                    return ser;
-//                }
-//
-//            }
-//
-//        });
-//})();
-//
-
 
 // service for Login Page
 angular.module('shoppingPad').service('loginServices',loginServices);
@@ -92,7 +36,7 @@ function loginServices($q){
 
     //passing user value to loginOTP
     this.getUser=function(){
-         console.log("inside getuser");
+         console.log();
         return $q(function(resolve,reject){
 
             if(users){
@@ -107,7 +51,4 @@ function loginServices($q){
 
     }
 
-    this.requestOTP=function(){}
-
-    this.verifyOTP=function(){}
 }

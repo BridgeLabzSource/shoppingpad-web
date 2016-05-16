@@ -17,6 +17,6 @@ function registerCtrl($scope,registerService,$stateParams,$state,Page) {
         }
 
         $scope.login=function(){
-            $state.go('login')
+            $state.go('app.login.step1')
         }
 }
