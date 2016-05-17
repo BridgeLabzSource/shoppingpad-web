@@ -7,9 +7,6 @@
                     url: "",
                     abstract: true,
                     controller: 'homeCtrl',
-                    onEnter: function () {
-                        alert("enter in APP");
-                    },
                     template: '<div ui-view></div>'
                 })
                 //this is registeration's index state
@@ -34,7 +31,7 @@
                     controller: 'registerCtrl'
                 })
                 .state('app.home.register3', {
-                    url: "/register/{categoryId:[0-9]{1,5}}",
+                    url: "/register/:name",
                     templateUrl: 'template/register/registration-2.html',
                     controller: 'registerCtrl'
                 })

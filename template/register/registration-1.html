@@ -3,8 +3,8 @@
     <div style="margin-top: 46px"></div>
     <div flex layout="row" layout-align="center" layout-wrap>
         <div flex="120" flex-md="90" flex-sm="95" layout="row" layout-wrap style="height: 103px;" ng-init="getCategory()">
-            <div ng-click="subCategory(cur_category .id)" flex="45" class="Rectangle-425" ng-repeat="cat in category">
-                <span class="AUTOMOTIVE">{{cat.name}} </span>
+            <div  flex="45" class="Rectangle-425" ng-repeat="cat in category">
+                <span ng-click="subCategory(cat.name)" class="AUTOMOTIVE">{{cat.name}} </span>
                <md-icon  class="ic_add_black_24px" md-svg-src="{{cat.icon}}"></md-icon>
 
             </div>

@@ -1,37 +1,41 @@
 <md-content ng-controller="registerCtrl" >
     <h3 class="Select-Sub-category">Select Sub-Category</h3>
 
-    <div layout="row" layout="column" flex="100" style="width: 200px;">
-        <div style="margin-left:16px" class="Rectangle-425-Copy-3" flex-gt-sm="50">
-            <span class="RETAIL">RETAIL</span>
+    <!--<div layout="row" layout="column" flex="100" style="width: 200px;">-->
+        <!--<div style="margin-left:16px" class="Rectangle-425-Copy-3" flex-gt-sm="50">-->
+            <!--<span class="RETAIL">RETAIL</span>-->
 
-            <md-icon class="ic_add_black_24px" md-svg-src='assets/images/clear.svg'></md-icon>
-            <div class="Path-625"></div>
-        </div>
+            <!--<md-icon class="ic_add_black_24px" md-svg-src='assets/images/clear.svg'></md-icon>-->
+            <!--<div class="Path-625"></div>-->
+        <!--</div>-->
 
 
+    <!--</div>-->
+    <div layout="row" layout="column" flex=100" style="width:200px;">
+        <div style="margin-left:16px" class="Rectangle-425-Copy-3"  flex-gt-sm="50">
+            <span class="RETAIL">{{cur_category.name}}</span>
     </div>
-    <div layout="row" layout="column" flex="100">
-        <div style="margin-left:16px" class="Rectangle-4251" flex-gt-sm="50">
-            <span class="ELECTRONICS">Electronics</span>
+    <!--<div layout="row" layout="column" flex="100">-->
+        <!--<div style="margin-left:16px" class="Rectangle-4251" flex-gt-sm="50">-->
+            <!--<span class="ELECTRONICS">Electronics</span>-->
 
-            <md-icon class="ic_add_black_24px" md-svg-src='assets/images/add.svg'></md-icon>
-        </div>
-        <div style="margin-left:18px; margin-right:20px;" class="Rectangle-425-Copy-4" flex-gt-sm="50">
-            <span class="SUB-CAT-2">SUB-CAT-2</span>
-            <md-icon class="ic_add_black_24px-copy" md-svg-src='assets/images/add.svg'></md-icon>
-        </div>
-    </div>
-    <div layout="row" layout="column" flex="100">
-        <div style="margin-left:16px" class="Rectangle-4252" flex-gt-sm="50">
-            <span class="SUB-CAT-3">SUB-CAT-3</span>
-            <md-icon class="ic_add_black_24px" md-svg-src='assets/images/add.svg'></md-icon>
-        </div>
-        <div style="margin-left:18px; margin-right:20px;" class="Rectangle-425-Copy-31" flex-gt-sm="50">
-            <span class="SUB-CAT-4">SUB-CART-4</span>
-            <md-icon class="ic_add_black_24px-copy" md-svg-src='assets/images/add.svg'></md-icon>
-        </div>
-    </div>
+            <!--<md-icon class="ic_add_black_24px" md-svg-src='assets/images/add.svg'></md-icon>-->
+        <!--</div>-->
+        <!--<div style="margin-left:18px; margin-right:20px;" class="Rectangle-425-Copy-4" flex-gt-sm="50">-->
+            <!--<span class="SUB-CAT-2">SUB-CAT-2</span>-->
+            <!--<md-icon class="ic_add_black_24px-copy" md-svg-src='assets/images/add.svg'></md-icon>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div layout="row" layout="column" flex="100">-->
+        <!--<div style="margin-left:16px" class="Rectangle-4252" flex-gt-sm="50">-->
+            <!--<span class="SUB-CAT-3">SUB-CAT-3</span>-->
+            <!--<md-icon class="ic_add_black_24px" md-svg-src='assets/images/add.svg'></md-icon>-->
+        <!--</div>-->
+        <!--<div style="margin-left:18px; margin-right:20px;" class="Rectangle-425-Copy-31" flex-gt-sm="50">-->
+            <!--<span class="SUB-CAT-4">SUB-CART-4</span>-->
+            <!--<md-icon class="ic_add_black_24px-copy" md-svg-src='assets/images/add.svg'></md-icon>-->
+        <!--</div>-->
+    <!--</div>-->
     <!-- footer-->
     <div class="Terms-Conditions">
         <span>Terms & conditions</span>
@@ -39,7 +43,7 @@
     <md-toolbar class="Rectangle-4091" style="background-color: #9013fe; ">
         <div class="md-toolbar-tools">
             <md-button class="SUBMIT"   aria-label="Settings">
-               <a ui-sref="business"><span style="margin-left: 100px;" >PROCEED</span></a>
+               <a ui-sref="app.home.register4"><span style="margin-left: 100px;" >PROCEED</span></a>
             </md-button>
         </div>
     </md-toolbar>
