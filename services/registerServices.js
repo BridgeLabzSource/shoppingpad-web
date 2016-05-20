@@ -1,53 +1,38 @@
 (function() {
-    angular.module('shoppingPad')
-        .factory('registerService', function ($q, $http) {
-            //stores json data into category array.
-            var category = {};
-            category.subCaegory = [];
-             category.cur_category = {};
-            baseUrl = 'http://localhost:4000/category';
-            //return {
-                //function to get all category
-            category.getAllCategory= function () {
-                    var deferred = $q.defer();
-                    //calling json data
-                    return $http.get(baseUrl).then(function (response) {
-                            category = response.data;
-                            deferred.resolve(category);
-                            return deferred.promise;
-                        },
-                        function (error) {
-                            deferred.reject(error);
-                            return deferred.promise;
-                        });
+    angular.module('shoppingPad').service('registerService', registerService,restService);
 
-                },
-               // get category by id
-                category.getSubCategory=function (name) {
-                    console.log('inside subcategory');
-                    var deferred = $q.defer();
-                    return $http.get(baseUrl +'/' + name)
-                        .success(function (response) {
-                            deferred.resolve(response.data);
-                            return deferred.promise;
-                        })
-                        .error(function(error){
-                            deferred.reject(error);
-                            return deferred.promise;
-                        })
+    function registerService($q, $http) {
+        //var category={};
+        var deferred = $q.defer();
+        //function to get all category
+             this.getAllCategory = function () {
 
-                };
-
-            return category;
-            //}
-        })
+                 //calling json data
+                 return restService.getRequest('/api/category',null).then(function (response) {
+                         category = response.data;
+                         deferred.resolve(category);
+                         return deferred.promise;
+                     },
+                     function (error) {
+                         deferred.reject(error);
+                         return deferred.promise;
+                     });
+             },
+                 //function to get category by id
+            this.getSubCategory = function (id) {
+                console.log('inside subcategory');
+                return $http.get(baseUrl + '/' + id)
+                    .success(function (response) {
+                        deferred.resolve(response.data);
+                          return deferred.promise;
+                    },
+                    function (error) {
+                        deferred.reject(error);
+                        return deferred.promise;
+                    });
+            };
+    }
 })();
-                //setCategory:function(id){
-                //
-                //    console.log('inside setCategory Service');
-                //    if(typeof id==="number"){
-                //        cur_category=id;
-                //    }
-                //}
+
 
 

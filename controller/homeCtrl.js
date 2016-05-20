@@ -3,9 +3,7 @@
         .controller('homeCtrl', function ($scope, Page) {
             Page.setTitle('ShoppingPad');
 
-
-
-            $scope.backbutton = function () {
+           $scope.backbutton = function () {
             }
         });
 })();

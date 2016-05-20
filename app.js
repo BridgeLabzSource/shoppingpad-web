@@ -1,5 +1,5 @@
 (function () {
-    angular.module('shoppingPad', ['ngResource', 'ngMaterial', 'ui.router', 'ngAnimate', 'ngAria', 'ngMessages'])
+    angular.module('shoppingPad', ['ngResource','ngMaterial', 'ui.router', 'ngAnimate', 'ngAria','ngMessages','OtdDirectives'])
         .config(function ($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/home/index');
             $stateProvider
@@ -9,7 +9,7 @@
                     controller: 'homeCtrl',
                     template: '<div ui-view></div>'
                 })
-                //this is registeration's index state
+                //this is registeration's index states
                 .state('app.home', {
                     url: "/home",
                     abstract: true,
@@ -28,12 +28,14 @@
                 .state('app.home.register2', {
                     url: "/register",
                     templateUrl: 'template/register/registration-1.html',
-                    controller: 'registerCtrl'
+                    controller: 'registerCtrl',
+
                 })
                 .state('app.home.register3', {
-                    url: "/register/:name",
+                    url: "/register/:categoryId",
                     templateUrl: 'template/register/registration-2.html',
                     controller: 'registerCtrl'
+
                 })
                 .state('app.home.register4', {
                     url: "/business",

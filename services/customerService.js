@@ -9,7 +9,7 @@
 
 		//a function to add customer data to backend used service.it takes customer object as paramater.
 		this.addCustomer = function (customer) {
-			alert("inside Service")
+			alert("inside Service");
 			return $http({
 				method: 'POST',
 				url: 'http://localhost:3007/api/addCustomer',
