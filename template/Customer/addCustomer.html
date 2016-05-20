@@ -1,7 +1,7 @@
 <div id="Rectangle-541">
-      <md-icon md-svg-src="./assets/images/csv.svg" class="ic_cloud_download_black_24px"></md-icon>
-      <md-button class="Upload-CSV-from-mem" ng-click="fileChanged()">Upload .CSV From Memory</md-button>
-<input type="file" style="display:none" id="fileUplaod" ng-model="myFile" name='file'onchange="angular.element(this).scope().profilePictureSelected(this)"/>
+    <md-icon md-svg-src="./assets/images/csv.svg" class="ic_cloud_download_black_24px"></md-icon>
+    <md-button class="Upload-CSV-from-mem" ng-click="getFile()">Upload .CSV From Memory</md-button>
+    <input type="file" style="display:none" id="fileUplaod" ng-model="myFile" name='file' onchange="angular.element(this).scope().csvFileSelected(this)" />
 </div>
 </div>
 <div id="Rectangle-542">
@@ -11,7 +11,6 @@
 <div id="seprate">
     <p>OR</p>
 </div>
-
 <!--Form to get Customer Name And number-->
 <form name="customer">
     <div layout-gt-sm="row">
@@ -39,4 +38,3 @@
         </md-button>
     </div>
 </form>
-
