@@ -1,5 +1,5 @@
 (function () {
-    angular.module('shoppingPad', ['ngResource','ngMaterial', 'ui.router', 'ngAnimate', 'ngAria','ngMessages','OtdDirectives'])
+    angular.module('shoppingPad', ['ngResource','ngMaterial', 'ui.router', 'ngAnimate', 'ngAria','ngMessages'])
         .config(function ($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/home/index');
             $stateProvider
@@ -15,9 +15,9 @@
                     abstract: true,
                     controller: 'homeCtrl',
                     template: '<div ui-view></div>',
-                    onEnter: function () {
-                        console.log('in ap.index');
-                    }
+                    // onEnter: function () {
+                    //     console.log('in ap.index');
+                    // }
                 })
                 //this is registeration's step1
                 .state('app.home.register1', {
@@ -28,13 +28,12 @@
                 .state('app.home.register2', {
                     url: "/register",
                     templateUrl: 'template/register/registration-1.html',
-                    controller: 'registerCtrl',
-
+                    controller: 'registerCtrl'
                 })
                 .state('app.home.register3', {
-                    url: "/register/:categoryId",
+                    url: "/register/{categoryId:[0-9]{1,5}}",
                     templateUrl: 'template/register/registration-2.html',
-                    controller: 'registerCtrl'
+                    controller: 'registerCtrl' 
 
                 })
                 .state('app.home.register4', {

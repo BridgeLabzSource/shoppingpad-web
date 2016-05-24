@@ -1,80 +1,66 @@
+      <md-content>
+                <p class="Welcome-to-Shoppingp">Welcome to Shoppingpad</p>
 
-            <!--<md-content>-->
-                <!--<p class="Welcome-to-Shoppingp">Welcome to Shoppingpad</p>-->
+                <p class="To-list-your-busines">To list your business we need following details:</p>
+                <form name="myForm" ng-app="shoppingPad" ng-controller="businessCtrl" class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-8">
+                            <md-input-container class="Path-688">
+                                <label>Bussiness Title</label>
+                                <md-icon md-svg-icon="assets/images/drive.svg"></md-icon>
+                                <input class="Create-your-business"  name="title" id="name" ng-model="title" ng-required="true">
+                                   <div ng-messages="myForm.title.$error">
+                                    <div ng-message="required">Campaign Name is required.</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+                        <div class="col-xs-8">
+                           <md-input-container class="Path-688">
+                                <md-icon md-svg-icon="assets/images/assignment.svg"></md-icon>
+                                <input name="url" id="url" placeholder="URL" ng-model="url"  ng-required="true">
+                        <div ng-messages="myForm.url.$error">
+                                    <div ng-message="required">URL is required.</div>
+                                    </div>
+                            </md-input-container>
+                        </div>
+                        <div class="col-xs-8">
+                            <md-input-container class="Path-688">
+                                <md-icon md-svg-icon="assets/images/mail.svg"></md-icon>
+                                <input name="email" id="email" placeholder="Email" ng-model="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-required="true">
 
-                <!--<p class="To-list-your-busines">To list your business we need following details:</p>-->
-                <!--<form name="myForm" ng-app="shoppingPad" ng-controller="businessCtrl" class="container-fluid">-->
+                                <div ng-messages="myForm.email.$error" >
+                                    <div ng-message="required">Campaign email is required.</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+                        <div class="col-xs-8">
+                            <md-input-container class="Path-688">
+                                <md-icon md-svg-icon="assets/images/place.svg"></md-icon>
+                                <input name="name" id="location" placeholder="Location" ng-model="location" ng-required="true">
 
-                    <!--<div class="row">-->
-                        <!--<div class="col-xs-8">-->
-                            <!--<md-input-container class="Path-688">-->
-                                <!--<label>Bussiness Title</label>-->
-                                <!--<md-icon md-svg-icon="assets/images/drive.svg"></md-icon>-->
-                                <!--<input class="Create-your-business"  name="name" id="name" ng-model="name" ng-required="true">-->
-                                <!--<div ng-messages="myForm.name.$error">-->
-                                    <!--<div ng-message="required">Campaign Name is required.</div>-->
-                                <!--</div>-->
-                            <!--</md-input-container>-->
-                        <!--</div>-->
-                        <!--<div class="col-xs-8">-->
-                            <!--<md-input-container class="Path-688">-->
-                                <!--<md-icon md-svg-icon="assets/images/assignment.svg"></md-icon>-->
-                                <!--<input name="url" id="url" placeholder="Email" ng-model="url"  ng-required="true">-->
-                                <!--&lt;!&ndash;<md-select name="url" id="myselect" placeholder="Create your business URL" ng-model="obj.url"&ndash;&gt;-->
-                                           <!--&lt;!&ndash;ng-required="true">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<md-option ng-repeat="o in options" ng-value="o">{{o}}</md-option>&ndash;&gt;-->
-                                <!--&lt;!&ndash;</md-select>&ndash;&gt;-->
-                                <!--<div ng-messages="myForm.url.$error">-->
-                                    <!--<div ng-message="required">URL is required.</div>-->
-                                <!--</div>-->
-                            <!--</md-input-container>-->
-                        <!--</div>-->
-                        <!--<div class="col-xs-8">-->
-                            <!--<md-input-container class="Path-688">-->
-                                <!--<md-icon md-svg-icon="assets/images/mail.svg"></md-icon>-->
-                                <!--<input name="email" id="email" placeholder="Email" ng-model="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" ng-required="true">-->
+                                <div ng-messages="myForm.name.$error">
+                                    <div ng-message="required">Campaign Location is required.</div>
+                                </div>
+                            </md-input-container>.
 
-                                <!--<div ng-messages="myForm.email.$error" >-->
-                                    <!--<div ng-message="required">Campaign email is required.</div>-->
-                                <!--</div>-->
-                            <!--</md-input-container>-->
-                        <!--</div>-->
-                        <!--<div class="col-xs-8">-->
-                            <!--<md-input-container class="Path-688">-->
-                                <!--<md-icon md-svg-icon="assets/images/place.svg"></md-icon>-->
-                                <!--<input name="name" id="location" placeholder="Location" ng-model="location" ng-required="true">-->
+                        </div>
 
-                                <!--<div ng-messages="myForm.name.$error">-->
-                                    <!--<div ng-message="required">Campaign Location is required.</div>-->
-                                <!--</div>-->
-                            <!--</md-input-container>.-->
+                    </div>
+                    <div class="Rectangle-581">
 
-                        <!--</div>-->
+                    </div>
+                    <div class="Proximity-to-serve">
+                        <span>Proximity to serve</span>
+                        <!--<div class="Shape"></div>-->
+                    </div>
+                    <md-toolbar class="Rectangle-4091" style="background-color: #9013fe; ">
+                        <div class="md-toolbar-tools">
+                            <md-button class="SUBMIT" ng-disabled="myForm.$invalid" aria-label="Settings" ng-click="submit()">
+                                <span style="margin-left: 120px;" >SUBMIT</span>
+                            </md-button>
+                        </div>
+                    </md-toolbar>
+                </form>
 
-                    <!--</div>-->
-                    <!--<div class="Rectangle-581">-->
-
-                    <!--</div>-->
-                    <!--<div class="Proximity-to-serve">-->
-                        <!--<span>Proximity to serve</span>-->
-                        <!--&lt;!&ndash;<div class="Shape"></div>&ndash;&gt;-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash;<md-slider flex min="0" max="255" ng-model="color.red" aria-label="red" id="red-slider" class>&ndash;&gt;-->
-                    <!--&lt;!&ndash;</md-slider>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<md-button type="button" ng-click="reset()">RESET</md-button>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<md-button class="md-primary" ng-disabled="myForm.$invalid">SUBMIT</md-button>&ndash;&gt;-->
-                    <!--<md-toolbar class="Rectangle-4091" style="background-color: #9013fe; ">-->
-                        <!--<div class="md-toolbar-tools">-->
-                            <!--<md-button class="SUBMIT" ng-disabled="myForm.$invalid" ng-click="submit()">-->
-                               <!--SUBMIT-->
-                            <!--</md-button>-->
-                        <!--</div>-->
-                    <!--</md-toolbar>-->
-                    <!-- -->
-                    <!--<google-places location=location></google-places>-->
-                    <!--<button ng-click="doSearch()" class="btn btn-large btn-primary">Search</button>-->
-                <!--</form>-->
-
-        <!--</div>-->
-        <!--</md-content>-->
-<h1>hello</h1>
+        </div>
+        </md-content>
