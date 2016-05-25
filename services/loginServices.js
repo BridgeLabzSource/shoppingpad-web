@@ -12,13 +12,13 @@ function loginServices($q,restService){
     this.setUser=function(user){
         alert("inside post");
 
-            return restService.postRequest('save/saveOTP',user,null).then(function(response){
+        return restService.postRequest('save/saveOTP',user,null).then(function(response){
                 deferred.resolve(response.status);
-                    mobile = user.mobile,
-                        password = user.password,
-                        users.push(user),
-                        console.log(users)
-                    console.log("inside set service");
+                mobile = user.mobile,
+                    password = user.password,
+                    users.push(user),
+                    console.log(users)
+                console.log("inside set service");
 
                 //return promise object
                 return deferred.promise;
@@ -27,7 +27,7 @@ function loginServices($q,restService){
                 deferred.reject(error);
                 return deferred.promise;
             }
-            );
+        );
         //return $q(function(resolve,reject){
         //    if(user) {
         //        resolve(
@@ -65,6 +65,18 @@ function loginServices($q,restService){
 
         })
         //return restService.getRequest('save/all',null).then(function(response){
+        //
+        //        console.log('inside get service');
+        //        //return promise object
+        //        deferred.resolve(response.status);
+        //        console.log(response)
+        //        return deferred.promise;
+        //    },
+        //    function(error){
+        //        deferred.reject(error)
+        //        return deferred.promise;
+        //
+        //})        //return restService.getRequest('save/all',null).then(function(response){
         //
         //        console.log('inside get service');
         //        //return promise object
