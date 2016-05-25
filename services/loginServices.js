@@ -1,98 +1,59 @@
-//(function() {
-//    angular.module('shoppingPad')
-//        .factory('loginServices', function ($http,$q){
 
-
-//            console.log('inside services');
-//            var user={},
-//                mobile=null,
-//                password=null,
-//                OTP=null;
-//
-//
-//            return{
-//
-//                setMobile:function(data){
-//
-//                    return $q(function(resolve,reject){
-//                        if(data) {
-//
-//                            resolve(data);
-//                        }
-//                        reject("data is not same");
-//                    })
-//                },
-//
-//                //setPassword:function(data){
-//                //    console.log("password set");
-//                //    password=data;
-//                //},
-//                //login:function(mob,pass)
-//                //{
-//                //    mobile=mob;
-//                //    password=pass;
-//                //},
-//                //verifyOTP:function(data)
-//                //{
-//                //    return $q(function(resolve,reject){
-//                //
-//                //            if(data==5) resolve("data is 5");
-//                //            reject("dat is not 5");
-//                //    });
-//                //},
-//                //resendOTP:function(){
-//                //
-//                //}
-//
-//                getMobile:function(data){
-//                    return ser;
-//                }
-//
-//            }
-//
-//        });
-//})();
-//
-
-
-// service for Login Page
 angular.module('shoppingPad').service('loginServices',loginServices);
 
-function loginServices($q){
+function loginServices($q,restService){
 
     var users=[];
     var mobile=null;
     var password=null;
+    var deferred=$q.defer();
 
     //getting user value from loginController
     this.setUser=function(user){
+        alert("inside post");
 
-        return $q(function(resolve,reject){
-            if(user) {
-                resolve(
-
+            return restService.postRequest('save/saveOTP',user,null).then(function(response){
+                deferred.resolve(response.status);
                     mobile = user.mobile,
-                    password = user.password,
-                    users.push(user),
-                    console.log(users)
-                )
+                        password = user.password,
+                        users.push(user),
+                        console.log(users)
+                    console.log("inside set service");
+
+                //return promise object
+                return deferred.promise;
+            },
+            function(error){
+                deferred.reject(error);
+                return deferred.promise;
             }
-                else
-                {
-                    reject("something is wrong")
-                }
-
-
-              //storing value to users array
-
-        })
-
+            );
+        //return $q(function(resolve,reject){
+        //    if(user) {
+        //        resolve(
+        //
+        //            mobile = user.mobile,
+        //            password = user.password,
+        //            users.push(user),
+        //            console.log(users)
+        //        )
+        //    }
+        //        else
+        //        {
+        //            reject("something is wrong")
+        //        }
+        //
+        //
+        //      //storing value to users array
+        //
+        //})
+        //
 
     };//end of setUser Function
 
     //passing user value to loginOTP
     this.getUser=function(){
-         console.log("inside getuser");
+
         return $q(function(resolve,reject){
 
             if(users){
@@ -103,7 +64,19 @@ function loginServices($q){
             }
 
         })
-
+        //return restService.getRequest('save/all',null).then(function(response){
+        //
+        //        console.log('inside get service');
+        //        //return promise object
+        //        deferred.resolve(response.status);
+        //        console.log(response)
+        //        return deferred.promise;
+        //    },
+        //    function(error){
+        //        deferred.reject(error)
+        //        return deferred.promise;
+        //
+        //})
 
     }
 

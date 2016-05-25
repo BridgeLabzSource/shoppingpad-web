@@ -2,25 +2,25 @@
     <div>
         <h3 class="Please-wait-for-One">Please wait for One Time Password!</h3>
         <p class="We-have-sent-an-OTP ">we have sent an OTP on your registered mobile no</p>
-        <div style="margin-top: 30px">
+        <div style="margin-top: 30px" ng-init="get()">
             <form name="myForm" ng-app="shoppingPad" class="container-fluid myLoginForm" ng-submit="submit()" >
-                <div class="row" class="loginOTP">
+                <div class="row" style="margin-left: 16px;">
                     <div class="col-xs-8" style="height: 74px;">
                         <md-input-container>
                             <md-icon md-svg-icon="assets/images/device.svg"></md-icon>
-                            <input type="number" placeholder="Enter registered mobile no" name="name" id="name" ng-model="mobile">
+                            <input type="number" placeholder="Enter registered mobile no" name="name" id="name" ng-model="mobile" readonly>
                         </md-input-container>
                     </div>
                     <div class="col-xs-8" style="height: 74px;">
                         <md-input-container>
                             <md-icon md-svg-icon="assets/images/lock.svg"></md-icon>
-                            <input type="password" placeholder="Enter 3-D secure pin" name="security" id="security" ng-model="password">
+                            <input type="password" placeholder="Enter 3-D secure pin" name="security" id="security" ng-model="password" readonly>
                         </md-input-container>
                     </div>
                     <div class="col-xs-8" style="height: 74px;">
                         <md-input-container class="loginFormEachInput">
                             <md-icon md-svg-icon="assets/images/lock.svg"></md-icon>
-                            <input type="password" placeholder="Enter OTP" name="OTP" id="OTP" ng-model="OTP" ng-required="true" minlength="6">
+                            <input type="password" placeholder="Enter OTP" name="OTP" id="OTP" ng-model="OTP" ng-required="true" minlength="5">
                             <div ng-messages="myForm.name.$error">
                                 <div ng-message="required">Enter Pin no(6-digit).</div>
                             </div>
@@ -28,12 +28,16 @@
                     </div>
                 </div>
                 <div>
-                    <p  style="text-align: center">Timer</p>
-                    <h3></h3>
+                    <p class="Timer">Timer</p>
+                    <div>
+                        <md-icon md-svg-icon="assets/images/refresh.svg" ng-show="show" ng-click="refresh()" class="refreshIcon"></md-icon>
+                        <h3 ng-show="abc" class="countDownTimer">00:{{counter}}</h3>
+                    </div>
+
                 </div>
                 <div>
-                    <md-toolbar style="margin-top: 160px;">
-                        <md-button class="md-primary" ng-disabled="myForm.$invalid" style="margin-top: 15px" ng-click="loginOTP()">LOGIN</md-button>
+                    <md-toolbar class="loginOTPtoolBar">
+                        <md-button class="md-primary loginOTPButton" ng-disabled="myForm.$invalid" ng-click="loginOTP()">LOGIN</md-button>
 
                     </md-toolbar>
                 </div>

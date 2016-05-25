@@ -1,49 +1,65 @@
-//angular.module('shoppingPad').controller('loginCtrl',loginCtrl);
-//y
-//function loginCtrl($scope,$stateParams,$state,loginServices) {
-//    $scope.login=function(mob,pin)
-//    {
-//        loginServices.login(mob,pin).then(function(){
-//            $state.go('login') //move to next state
-//        })
-//    }
-//}
+angular.module('shoppingPad').controller('loginController', loginCtrl);
 
-angular.module('shoppingPad').controller('loginController',loginCtrl);
+function loginCtrl($scope, $state, loginServices, Page, $timeout) {
+    Page.setTitle('Signin');
+    $scope.login = function () {
+        //passing data to user credential of login.html
+        var user = {
+            mobile: $scope.mobile,
+            password: $scope.password
 
-    function loginCtrl($scope,$state,loginServices,Page){
-        Page.setTitle('SignUp');
-        $scope.login=function()
-        {
-            //passing data to user credential of login.html
-            var user={
-                mobile:$scope.mobile,
-                password:$scope.password
+        };
+        console.log(user)
+        loginServices.setUser(user).then(function (response) {
+            console.log("state change")
+            $state.go('app.login.step2');
 
-            };
-            //
-            //loginServices.setUser(user).then(function(response){
-            //    $scope.data=response;
-            //    console.log($scope.data);
-            //    $state.go('loginOTP')
-            //});
+        });
 
-            //passin data to loginServices and sending to next state
-            loginServices.setUser(user).then(function(response){
-                //$scope.data=response;
-            $state.go('loginOTP');
+    };
 
-            });
+    $scope.get = function () {
 
-            //loginServices.login(mob,pass).then(function(){
-            //    console.log("inside services");
-            //    $state.go('loginOTP')
-            //})
 
+        var counter;
+        $scope.counter = 30;
+        $scope.onTimeout = function () {
+            $scope.show = false;
+            $scope.abc = true;
+            $scope.counter--;
+            mytimeout = $timeout($scope.onTimeout, 1000);
+
+            if ($scope.counter == 0) {
+                $timeout.cancel(mytimeout)
+                $scope.abc = false;
+                $scope.show = true;
+
+                return $scope.counter = 30;
+            }
 
         };
 
+        var mytimeout = $timeout($scope.onTimeout, 1000);
+
+        $scope.refresh = function () {
+            return $scope.onTimeout();
+        }
+
+        user = loginServices.getUser().then(function (users) {
+
+            //passing values to loginOTP.html
+            $scope.mobile = users[0].mobile;
+            console.log($scope.mobile);
+            $scope.password = users[0].password;
+            console.log($scope.password);
+
+            $scope.loginOTP = function () {
+                $state.go('app.dashboard.step1');
+                $timeout.cancel(mytimeout);
+
+            }
 
 
-
+        })
     }
+}
