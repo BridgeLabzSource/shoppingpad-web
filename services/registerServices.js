@@ -3,6 +3,7 @@
 
     function registerService($q, $http,restService) {
         var deferred = $q.defer();
+        
         //function to get all category
              this.getAllCategory = function () {
                   console.log('in controller');

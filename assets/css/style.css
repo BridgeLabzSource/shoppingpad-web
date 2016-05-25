@@ -13,6 +13,12 @@
     /*background-color: #9013fe;*/
 
 }
+.retail {
+    width:125px;
+    height:22px;
+    padding-top:10px;
+    padding-left: 5px;
+}
 .ShoppingPad {
     width: 126px;
     height: 27px;
@@ -29,10 +35,11 @@
 
 }
 .Rectangle-425-Copy-3 {
-    width: 102px;
+    width: 150px;
     height: 36px;
     border-radius: 3px;
     background-color: #650eb1;
+    margin-left:16px;
 
 }
 .Rectangle-409 {
@@ -92,7 +99,7 @@
     border:1px solid #9013fe
 }
 .Rectangle-425 {
-    width: 170px;
+    width: 190px;
     height: 36px;
     border-radius: 3px;
     background-color: #e9e9e9;
@@ -130,18 +137,13 @@
     margin-top: 16px;
 
 }
-.AUTOMOTIVE {
-    width: 107px;
-    height: 22px;
-    font-family: Avenir-Medium;
-    font-size: 16px;
-    color: #000000;
-}
-.ic_add_black_24px {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    padding-bottom: 6px;
+#Rectangle-542{
+     margin-left: 16px;
+    margin-top: 18px;
+    width: 328px;
+    height: 56px;
+    border-radius: 3px;
+    border:1px solid #9013fe
 
 }
 .Select-Category {
@@ -219,18 +221,34 @@
     border:1px solid #9013fe;
 }
 .Bottom {
-    margin-top: 85px;
+    margin-top: 105px;
     width: 360px;
     height: 48px;
     background-color: #9013fe;
 }
+
+
 .ADD-CUSTOMER {
     margin-left: 115px;
-    width: 130px;
-    height: 22px;
+  width: 130px;
+  height: 22px;
 
-    font-size: 14px;
-    color: #ffffff;
+  font-size: 14px;
+  color: #ffffff;
+}
+.md-tab{text-transform: none}
+#Cust_Rectangle-602 {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height:560px;
+  width: 360px;
+  
+}
+#scrollA{
+  height:560px;
+  /*width: 360px;*/
+
+  
 }
 .Rectangle-425-Copy-31 {
     width: 129px;
@@ -361,7 +379,7 @@
     height: 48px;
     background-color: #9013fe;
     /*margin-bottom: 70px;*/
-    margin-top: 30px;
+    margin-top: 75px;
 }
 .PROCEED {
     width: 72px;
@@ -479,4 +497,11 @@ input[type=number]::-webkit-outer-spin-button {
     color: #000000;
     margin-top: 33px;
 
+}
+#bounds {
+    margin-top: 10px;
+    margin-left: 270px;
+ font-size: 12px;
+  width: 90px;
+  height: 14px;
 }

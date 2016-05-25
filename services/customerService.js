@@ -6,7 +6,6 @@
 	function customerService($q, $http) {
 		//this is deferred object which will resolve or resolve the promise
 		var deferred = $q.defer();
-
 		//a function to add customer data to backend used service.it takes customer object as paramater.
 		this.addCustomer = function (customer) {
 			alert("inside Service");

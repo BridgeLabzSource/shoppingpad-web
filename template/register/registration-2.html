@@ -1,8 +1,8 @@
-<md-content >
+<md-content ng-init="categoryName()" >
     <h3 class="Select-Sub-category">Select Sub-Category</h3>
-    <div layout="row" layout="column" flex=100"  style="width:200px;">
-        <div style="margin-left:16px" class="Rectangle-425-Copy-3"  flex-gt-sm="50" >
-            <span class="AUTOMATIVE">{{cur_category.name}}</span>
+    <div layout="row" layout="column" flex="100">
+        <div  class="Rectangle-425-Copy-3">
+            <div class="retail">{{cur_category.name}}</div>
         </div>
     </div>
     <div class="Path-625"></div>
@@ -14,7 +14,7 @@
        </div>
     </div>
    <div class="Terms-Conditions">
-        <span>Terms & conditions</span>
+        <span>Terms &amp; conditions</span>
     </div>
     <md-toolbar class="Rectangle-4091" style="background-color: #9013fe; ">
         <div class="md-toolbar-tools">

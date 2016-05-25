@@ -1,19 +1,17 @@
-<md-content >
+<md-content>
     <h3 class="Select-Category">Select Category</h3>
     <div ></div>
     <div flex layout="row" layout-align="center" layout-wrap>
         <div class="rectangle" flex="120" flex-md="90" flex-sm="95" layout="row" layout-wrap  ng-init="getCategory()">
             <div  flex="45" class="Rectangle-425" ng-repeat="cat in category">
-                <span ng-click="subCategory(cat.id)"class="AUTOMOTIVE">{{cat.name}}</span>
+                <span ng-click="subCategory(cat.id)" class="AUTOMOTIVE">{{cat.name}}</span>
                <md-icon  class="ic_add_black_24px" md-svg-src="{{cat.icon}}"></md-icon>
-
             </div>
         </div>
+        <div ui-view></div>
     </div>
       <div class="Terms-Conditions">
-        <span>Terms & conditions</span>
+        <span>Terms &amp; conditions</span>
     </div>
-</div>
-  <div ui-view></div>
-  </md-content>
+</md-content>
 

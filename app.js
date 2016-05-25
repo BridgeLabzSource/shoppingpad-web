@@ -1,3 +1,4 @@
+
 (function () {
     angular.module('shoppingPad', ['ngResource','ngMaterial', 'ui.router', 'ngAnimate', 'ngAria','ngMessages'])
         .config(function ($stateProvider, $urlRouterProvider) {
@@ -7,7 +8,10 @@
                     url: "",
                     abstract: true,
                     controller: 'homeCtrl',
-                    template: '<div ui-view></div>'
+                    template: '<div ui-view></div>',
+                    onEnter: function () {
+                        console.log('in app');
+                    }
                 })
                 //this is registeration's index states
                 .state('app.home', {
@@ -15,9 +19,9 @@
                     abstract: true,
                     controller: 'homeCtrl',
                     template: '<div ui-view></div>',
-                    // onEnter: function () {
-                    //     console.log('in ap.index');
-                    // }
+                    onEnter: function () {
+                        console.log('in ap.index');
+                    }
                 })
                 //this is registeration's step1
                 .state('app.home.register1', {
@@ -28,13 +32,19 @@
                 .state('app.home.register2', {
                     url: "/register",
                     templateUrl: 'template/register/registration-1.html',
-                    controller: 'registerCtrl'
+                    controller: 'registerCtrl',
+                    onEnter: function () {
+                        console.log('in ap.regi2');
+                    }
                 })
                 .state('app.home.register3', {
                     url: "/register/{categoryId:[0-9]{1,5}}",
+                    params:{},
                     templateUrl: 'template/register/registration-2.html',
-                    controller: 'registerCtrl' 
-
+                    controller: 'registerCtrl',
+                    onEnter: function () {
+                        console.log('in ap.regi3');
+                    }
                 })
                 .state('app.home.register4', {
                     url: "/business",
