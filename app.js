@@ -2,7 +2,7 @@
       .config(function ($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/home/index');
             $stateProvider.state('app', {
-                    
+                    url:'',
                     abstract: true,
                     controller: 'homeCtrl',
                     onEnter: function () {

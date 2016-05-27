@@ -1,21 +1,46 @@
 angular.module('shoppingPad').service('restService',restService);
 function restService($http){
 	//set port number and baseUrl here
-	var port=3000;
+	var port=3001;
 	var baseUrl="http://localhost:"+port;
 
 //generic getRequest function 
-	this.getRequest=function(path,query){
-		console.log("we are in the getRequest");
-		var result=$http.get(baseUrl+"/"+path,query);
-		return result;
-	}//end of getRequest function
+ this.postRequest=function(url,data,successCallback,failureCallback){
+    return $http({
+             method: 'POST',
+             url: baseUrl+"/"+url,
+             data: data
+           });
+// this.postRequest=function(url,data){
+// 	return $http({
+// 		method:'POST',
+// 		url:baseUrl+"/"+url,
+// 		data:data
+// 	}).then(function(response){
+// 		successCallback(response);
 
-//generic post Request function
-	this.postRequest=function(path,data,headers){
-		//call http post method 
-		var result=$http.post(baseUrl+"/"+path,data);
-		alert("after post")
-		return result;
-	}//end of postRequest method
+// 	},
+// 	function(error){
+// 		alert("internal server error");
+// 		failureCallback(error);
+
+// 	});
+
+};//end of postRequest function
+
+//generic postRequest function
+this.getRequest=function(url,successCallback,failureCallback){
+	return $http({
+		method:"GET",
+		url:baseUrl+"/"+url,
+	 });
+	//.then(function(response){
+	// 	successCallback(response);
+	// },
+	// function(error){
+	// 	failureCallback(error);
+	// });
+
+};//end of getRequest function
 }//end of service
+ 

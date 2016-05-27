@@ -1,7 +1,6 @@
 angular.module('shoppingPad').controller('headerCloackCtrl',function($scope,$interval){
 
     function callAtInterval(){
-        console.log("this text is getting printed after each second");
         var today = new Date();
         h=today.getHours();
         var m = today.getMinutes();
@@ -19,6 +18,5 @@ angular.module('shoppingPad').controller('headerCloackCtrl',function($scope,$int
         $scope.m=m;
         $scope.s=s;
     }
-
     $interval(callAtInterval, 1000);
 });
