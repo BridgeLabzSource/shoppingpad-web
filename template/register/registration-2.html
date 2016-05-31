@@ -1,24 +1,29 @@
 <md-content ng-init="categoryName()" >
     <h3 class="Select-Sub-category">Select Sub-Category</h3>
     <div layout="row" layout="column" flex="100">
-        <div  class="Rectangle-425-Copy-3">
-            <div class="retail">{{cur_category.name}}</div>
+        <div class="Rectangle-425-Copy-3">
+            <div class="retail">
+            <span>{{cur_category.name}}</span>
+          <!--   <md-icon class="ic_add_black_24px-copy" md-svg-src='assets/images/clear.svg'></md-icon> -->
+            </div>
         </div>
     </div>
     <div class="Path-625"></div>
-    <div flex layout="row" layout-align="center" layout-wrap>
-      <div class="rectangle" flex="120" flex-md="90" flex-sm="95" layout="row" layout-wrap>
-         <div  flex="45" class="Rectangle-4251" ng-repeat="cat in cur_category.details">
-            <span class="ELECTRONICS" >{{cat}}</span>
-         </div>
-       </div>
+    <div flex layout="row" layout-align="center" layout-wrap >
+      <div class="rectangle"  flex="120" flex-md="90" flex-sm="95" layout="row" layout-wrap>
+         <div flex="45" ng-click="addItem()" class="Rectangle-422" ng-repeat="cat in cur_category.details" 
+           <div class="ELECTRONICS" >
+            <span >{{cat}}</span>
+           <md-icon class="ic_add_black_24px-copy" md-svg-src='assets/images/add.svg'></md-icon>
+        </div>
+      </div>
     </div>
    <div class="Terms-Conditions">
         <span>Terms &amp; conditions</span>
     </div>
     <md-toolbar class="Rectangle-4091" style="background-color: #9013fe; ">
         <div class="md-toolbar-tools">
-            <md-button class="SUBMIT"   aria-label="Settings">
+            <md-button class="SUBMIT"  aria-label="Settings">
                <a ui-sref="app.home.register4"><span style="margin-left: 100px;" >PROCEED</span></a>
             </md-button>
         </div>

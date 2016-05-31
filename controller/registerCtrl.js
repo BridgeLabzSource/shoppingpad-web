@@ -5,6 +5,8 @@
         var categoryId=$stateParams.categoryId;
         $scope.category = null;
         $scope.cur_category=null;
+        $scope.cur_Category=[];
+        $scope.subCategoryData=[];
        //getCategory function to get all category from rest call.
        
         $scope.getCategory = function () {
@@ -26,14 +28,22 @@
                   $scope.cur_category = data.data; 
                   console.log($scope.cur_category);
                 $state.go('app.home.register3', {'categoryId':id});
+                $scope.cur_Category.push({
+                  name:$scope.cur_category.details
+                });
+                console.log($scope.cur_Category);
                }); 
         };
-          
-           $scope.categoryName=function(){
-              $scope.subCategory(categoryId);
-          
-          }
-        $scope.signin = function () {
+         // function to bind data to register-2 template
+
+         $scope.categoryName=function(){
+            $scope.subCategory(categoryId);
+        };
+         //add selected items to subCategoryData array 
+
+         $scope.addItem = function(name){
+       }
+         $scope.signin = function () {
            $state.go('app.login.step1')
         };  
     }

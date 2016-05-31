@@ -16,8 +16,8 @@
                             //error
                             deferred.reject(error);
                             return deferred.promise;
-                        })
-                }
-
-            }
+                        });
+                   }
+                   
+             }
     })();

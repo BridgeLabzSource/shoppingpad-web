@@ -7,7 +7,7 @@
         //function to get all category
              this.getAllCategory = function () {
                   console.log('in controller');
-                 //calling json data
+                 //calling restservices to get all category.
                  return restService.getRequest('api/category',null).then(function (response) {
                         category = response.data;
                          deferred.resolve(category);
@@ -21,6 +21,7 @@
                  //function to get category by id
             this.getSubCategory = function (id) {
                 console.log('inside subcategory');
+                // calling restServices to get category by id 
                 return restService.getRequest('api/category'+'/'+id)
                     .success(function (response) {
                         deferred.resolve(response.data);
@@ -31,8 +32,7 @@
                         return deferred.promise;
                     });
             };
-
-    }
+        }
 })();
 
 

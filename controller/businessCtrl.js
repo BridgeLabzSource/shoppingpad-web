@@ -6,9 +6,8 @@
         console.log('inside business controller');
         Page.setTitle('New BusinessSingUp');
 
-       
-        //sending data on submit function
-       $scope.submit = function () {
+         //sending data on submit function
+        $scope.submit = function () {
            //array of option
            alert('inside submit function');
            //saving data into user variable
@@ -23,11 +22,21 @@
                    if (response == 200) {
                        console.log(user);
                        alert('user saved');
-                   }
+
+              //clear all input after data send. 
+                    $scope.title="";
+                    $scope.url="";
+                    $scope.location="";
+                    $scope.email="";
+                 }
                },
                function (error) {
                    console.log(error);
                });
+           $scope.rating=2;
+
         };
+
+       
     }
 })();

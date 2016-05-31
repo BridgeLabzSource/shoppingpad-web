@@ -1,7 +1,10 @@
-
 (function () {
+    /**
+    @module shoppingPad
+    */
     angular.module('shoppingPad', ['ngResource','ngMaterial', 'ui.router', 'ngAnimate', 'ngAria','ngMessages'])
         .config(function ($stateProvider, $urlRouterProvider) {
+            
             $urlRouterProvider.otherwise('/home/index');
             $stateProvider
                 .state('app', {
@@ -29,6 +32,7 @@
                     templateUrl: 'template/register/registration.html',
                     controller: 'registerCtrl'
                 })
+                //this is registeration's step2
                 .state('app.home.register2', {
                     url: "/register",
                     templateUrl: 'template/register/registration-1.html',
@@ -37,6 +41,7 @@
                         console.log('in ap.regi2');
                     }
                 })
+                //this is registeration's step3
                 .state('app.home.register3', {
                     url: "/register/{categoryId:[0-9]{1,5}}",
                     params:{},
