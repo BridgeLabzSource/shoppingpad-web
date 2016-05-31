@@ -1,7 +1,9 @@
+
 (function () {
     angular.module('shoppingPad', ['ngResource', 'ngMaterial', 'ui.router', 'ngAnimate', 'ngAria', 'ngMessages'])
-        .config(function ($stateProvider, $urlRouterProvider) {
+        .config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
             $urlRouterProvider.otherwise('/home/index');
+            $httpProvider.interceptors.push('Interceptor');
             $stateProvider
                 .state('app', {
                     url: "",
@@ -57,6 +59,7 @@
                     url: '/step1',
                     templateUrl: 'template/signin/login.html',
                     controller: 'loginController'
+
                 })
                 .state('app.login.step2', {
                     url: '/step2',
@@ -75,7 +78,8 @@
                 })
                 .state('app.dashboard.step1', {
                     url: '/step1',
-                    templateUrl: 'template/dashBoard/dashBoard.html',
+                    templateUrl: 'template/dashBoard/dashBoard.html'
+
                 })
                 .state('app.customer',{
                     url:'/customer',

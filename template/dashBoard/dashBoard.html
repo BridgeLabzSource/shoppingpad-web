@@ -1,18 +1,44 @@
 <md-content>
-    <div ng-app="shoppingPad" ng-cloak="" class="Rectangle-520" >
-        <md-content class="md-padding" layout-xs="column" layout="row">
-            <div flex-xs="" flex-gt-xs="50" layout="column">
-                <md-card>
-                    <md-card-title>
-                        <md-card-title-text>
-                            <span class="md-headline">Card with image</span>
-                            <span class="md-subhead">Small</span>
-                        </md-card-title-text>
-                        <md-card-title-media>
-                            <div class="md-media-sm card-media"></div>
-                        </md-card-title-media>
-                    </md-card-title>
-                </md-card>
+    <div ng-app="shoppingPad" ng-cloak="" flex-xs="" flex-gt-xs="100" layout="column"
+         ng-controller="dashBoardController as demo">
+        <md-content>
+            <md-card class="Rectangle-520">
+                <md-card-title>
+                    <md-card-title-media>
+                        <img src="assets/images/joker.jpg" class="mdCardTitleMediaDashBoard"/>
+                    </md-card-title-media>
+                    <md-card-title-text class="mdCardTitleTextDashBoard">
+                        <span class="md-headline mdHeadLineDashBoard">New EMI option for Toyota ETIOS!</span>
+                        <span class="md-subhead mdsubHeadLineDashBoard">Book an Etios now and get upto 20% off on insurance and get easy EMI</span>
+                    </md-card-title-text>
+                </md-card-title>
+
+                <div class="mdCardFooterDashboard">
+                    <span class="mdCardTimeDashboard">{{1288323623006 | date:"dd/MM '|' h:mma"}}</span>
+                </div>
+            </md-card>
+
+
+            <div class="lock-size" layout="row" layout-align="center center">
+                <md-fab-speed-dial md-open="demo.isOpen" md-direction="up"
+                                   ng-class="demo.selectedMode" class="mdfabSpeedDial">
+                    <md-fab-trigger>
+                        <md-button aria-label="menu" class="md-fab " ng-click="onButtonClick">
+                            <md-icon md-svg-src="assets/images/add.svg" class="mdFabTriggerIcon"></md-icon>
+                        </md-button>
+                    </md-fab-trigger>
+                    <md-fab-actions>
+                        <md-button aria-label="Customer" class="md-fab md-raised md-mini">
+                            <md-icon md-svg-src="assets/images/addCustomer.svg" aria-label="Twitter"></md-icon>
+                        </md-button>
+                        <md-button aria-label="Broadcast" class="md-fab md-raised md-mini">
+                            <md-icon md-svg-src="assets/images/broadCast.svg" aria-label="Customer"></md-icon>
+                        </md-button>
+                        <md-button aria-label="Promotion" class="md-fab md-raised md-mini">
+                            <md-icon md-svg-src="assets/images/mail.svg" aria-label="Promotion"></md-icon>
+                        </md-button>
+                    </md-fab-actions>
+                </md-fab-speed-dial>
             </div>
         </md-content>
     </div>

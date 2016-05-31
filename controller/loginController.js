@@ -9,9 +9,9 @@ function loginCtrl($scope, $state, loginServices, Page, $timeout) {
             password: $scope.password
 
         };
-        console.log(user)
+        console.log(user);
         loginServices.setUser(user).then(function (response) {
-            console.log("state change")
+            console.log("state change");
             $state.go('app.login.step2');
 
         });
@@ -43,9 +43,9 @@ function loginCtrl($scope, $state, loginServices, Page, $timeout) {
 
         $scope.refresh = function () {
             return $scope.onTimeout();
-        }
+        };
 
-        user = loginServices.getUser().then(function (users) {
+         loginServices.getUser().then(function (users) {
 
             //passing values to loginOTP.html
             $scope.mobile = users[0].mobile;
@@ -54,8 +54,18 @@ function loginCtrl($scope, $state, loginServices, Page, $timeout) {
             console.log($scope.password);
 
             $scope.loginOTP = function () {
-                $state.go('app.dashboard.step1');
-                $timeout.cancel(mytimeout);
+                var data={
+                    mobile:$scope.mobile,
+                    password:$scope.password,
+                    otp:$scope.otp
+                };
+                  console.log(data);
+                loginServices.verifyOTP(data).then(function (response) {
+                    $state.go('app.dashboard.step1');
+                    $timeout.cancel(mytimeout);
+
+                });
+
 
             }
 

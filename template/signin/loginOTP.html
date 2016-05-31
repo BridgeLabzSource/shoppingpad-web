@@ -3,6 +3,8 @@
         <h3 class="Please-wait-for-One">Please wait for One Time Password!</h3>
         <p class="We-have-sent-an-OTP ">we have sent an OTP on your registered mobile no</p>
         <div style="margin-top: 30px" ng-init="get()">
+
+            <!-- form data -->
             <form name="myForm" ng-app="shoppingPad" class="container-fluid myLoginForm" ng-submit="submit()" >
                 <div class="row" style="margin-left: 16px;">
                     <div class="col-xs-8" style="height: 74px;">
@@ -20,7 +22,7 @@
                     <div class="col-xs-8" style="height: 74px;">
                         <md-input-container class="loginFormEachInput">
                             <md-icon md-svg-icon="assets/images/lock.svg"></md-icon>
-                            <input type="password" placeholder="Enter OTP" name="OTP" id="OTP" ng-model="OTP" ng-required="true" minlength="5">
+                            <input type="password" placeholder="Enter OTP" name="otp" id="otp" ng-model="otp" ng-required="true" minlength="5">
                             <div ng-messages="myForm.name.$error">
                                 <div ng-message="required">Enter Pin no(6-digit).</div>
                             </div>
@@ -28,6 +30,8 @@
                     </div>
                 </div>
                 <div>
+
+                    <!--timer icon-->
                     <p class="Timer">Timer</p>
                     <div>
                         <md-icon md-svg-icon="assets/images/refresh.svg" ng-show="show" ng-click="refresh()" class="refreshIcon"></md-icon>
