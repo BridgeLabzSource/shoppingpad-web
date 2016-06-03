@@ -22,65 +22,48 @@ function customerCtrl($http, $state, $scope, customerService,Page){
         };
         //calling add Customer service's addCustomer method by passing Customer Object.
 
-        customerService.addCustomer(customer)
-        .then(function(response){
-            console.log(response);
-        }).catch(function(error){
-            console.log(error);
+        customerService.addCustomer(customer,function(err,data){
+            if(data){
+                console.log(data);
+            } else{
+                console.log(err);
+            }
         });
-         // customerService.addCustomer(customer).then(function(response){
-         //    alert(response.data);
-         //    console.log("data saved");
-         // },
-         // function(error){
-         //    console.log("error");
-
-         // });
     }; //end of addCustomer function.
     //This is getCusttomer function.
     $scope.getCustomer=function() {
         alert("inside get Customer function");
         //call customerService's getCustomer() function to get list of all customers
-        customerService.getCustomer()
-            .then(function(response){
-                $scope.contacts=response.data;
-
-            }).catch(function(error){
+        customerService.getCustomer(function(err,response){
+            if(response){
+                console.log(response.data);
+                 $scope.contacts=response.data;
+            } else{
                 alert("error");
-
-            });
-        // .then(function(response) {
-        //         alert("wait....")
-        //         console.log(response);
-        //         $scope.contacts =response;
-        //     },
-        //     function(error) {
-        //         alert("error");
-        //     }); //end of customerService.getCustomer function call
+            }
+        });
     }; //end of getCustomer function
-
     //function to upload csv file to server
     function addFile(file) {
         alert("inside add file");
-        customerService.uploadCsv(file).then(function(response) {
-                if (response == "success") {
-                    alert("file uploaded");
-                } else {
-                    alert("something went wrong");
-                }
-            },
-            function(error) {
-                alet("error")
-
-            });
-    }
+        customerService.uploadCsv(file,function(err,data){
+            alert("upload csv controller")
+            if(err){
+                console.log("Error");
+            } else{
+                console.log("dataa");
+            }
+        });
+    console.log("Waiting....");
+    console.log("Waiting.....");
+    console.log("Waiting...");
+    };
     //this is method to call "input type=file" id in html
     $scope.getFile = function() {
-        alert("inside file changed");
+        
         angular.element('#fileUplaod').trigger('click');
 
     };
-
     $scope.csvFileSelected = function(data) {
         console.log($scope.myFile);
         console.log(data.files[0]);

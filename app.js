@@ -1,5 +1,9 @@
+/*
+@author:Azhar Khan
+
+*/
     angular.module('shoppingPad',['ngResource', 'ngMaterial', 'ui.router', 'ngAnimate', 'ngAria', 'ngMessages'])
-      .config(function ($stateProvider, $urlRouterProvider) {
+      .config(function ($httpProvider,$stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/home/index');
             $stateProvider.state('app', {
                     url:'',
