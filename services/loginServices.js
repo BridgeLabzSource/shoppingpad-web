@@ -1,5 +1,5 @@
 
-angular.module('shoppingPad').service('loginServices',loginServices);
+angular.module('shoppingPad').service('loginServices',loginServices)
 
 function loginServices($q,restService){
 
@@ -12,8 +12,9 @@ function loginServices($q,restService){
 
     //getting user value from loginController
 
-    var responseInterceptor=this.setUser=function(user){
+    this.setUser=function(user){
         console.log("inside post");
+
 
         return restService.postRequest('save/saveOTP',user,null).then(function(response){
                 //console.log('inside setUser');

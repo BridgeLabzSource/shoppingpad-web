@@ -3,7 +3,7 @@
     angular.module('shoppingPad', ['ngResource', 'ngMaterial', 'ui.router', 'ngAnimate', 'ngAria', 'ngMessages'])
         .config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
             $urlRouterProvider.otherwise('/home/index');
-            $httpProvider.interceptors.push('Interceptor');
+            //$httpProvider.interceptors.push('Interceptor');
             $stateProvider
                 .state('app', {
                     url: "",

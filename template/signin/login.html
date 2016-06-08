@@ -4,23 +4,24 @@
             <p class="Welcome-to-ShoppingP">Welcome to ShoppingPad</p>
             <div>
                 <form name="myForm" ng-app="shoppingPad" class="myForm" ng-submit="submit()">
-                    <div class="row formData" >
+                    <div class="row formData">
                         <div class="col-xs-8">
                             <md-input-container>
                                 <md-icon md-svg-icon="assets/images/device.svg"></md-icon>
-                                <input type="number" placeholder="Enter registered mobile no" ng-pattern="/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/" name="mobile" id="mobile" ng-model="mobile" ng-required="true">
-                                <div ng-messages="myForm.name.$error">
+                                <input type="number" placeholder="Enter user mobile no" name="mobile" id="mobile" ng-model="mobile" required minlength="10">
+                                    <div ng-messages="myForm.mobile.$error">
                                     <div ng-message="required">Registered mobile no.</div>
-                                    <div ng-message="minlength">too short</div>
+                                        <div ng-message="phoneNumber">The mobile No entered has already been registered</div>
+                                    <div ng-message="test">too short</div>
                                 </div>
                             </md-input-container>
                         </div>
                         <div class="col-xs-8">
                             <md-input-container>
                                 <md-icon md-svg-icon="assets/images/lock.svg"></md-icon>
-                                <input type="password" placeholder="Enter 3-D secure pin" name="password" id="password" ng-model="password" ng-required="true" minlength="6">
-                                <div ng-messages="myForm.name.$error">
-                                    <div ng-message="required">Enter Pin no(6-digit).</div>
+                                <input type="password" placeholder="Enter 3-D secure pin" name="password" id="password" ng-model="password" required minlength="6">
+                                <div ng-messages="myForm.password.$error">
+                                    <div ng-message="required">Enter Pin no.</div>
                                     <div ng-message="minlength">too short</div>
                                 </div>
                             </md-input-container>
@@ -40,5 +41,6 @@
 
     </div>
 
-
+<!--ng-init="test=true;"-->
 <!--ng-controller="loginCtrl"-->
+<!--phone-number-validator-->

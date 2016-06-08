@@ -7,8 +7,9 @@ function restService($http){
 //generic getRequest function
     this.getRequest=function(path,query){
         console.log("we are in the getRequest");
-        var result=$http.get(baseUrl+"/"+path,query);
-        return result;
+        var def=$http.get(baseUrl+"/"+path,query);
+        console.log(def)
+        return def;
     };//end of getRequest function
 
 //generic post Request function

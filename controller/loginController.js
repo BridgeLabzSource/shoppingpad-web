@@ -9,7 +9,7 @@ function loginCtrl($scope, $state, loginServices, Page, $timeout) {
             password: $scope.password
 
         };
-        console.log(user);
+        console.log(user.mobile)
         loginServices.setUser(user).then(function (response) {
             console.log("state change");
             $state.go('app.login.step2');
