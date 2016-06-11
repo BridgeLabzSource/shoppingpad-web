@@ -9,7 +9,8 @@ function loginCtrl($scope, $state, loginServices, Page, $timeout) {
             password: $scope.password
 
         };
-        console.log(user.mobile)
+        console.log(user.mobile);
+
         loginServices.setUser(user).then(function (response) {
             console.log("state change");
             $state.go('app.login.step2');
@@ -19,7 +20,6 @@ function loginCtrl($scope, $state, loginServices, Page, $timeout) {
     };
 
     $scope.get = function () {
-
 
         var counter;
         $scope.counter = 30;

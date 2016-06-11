@@ -1,5 +1,5 @@
 
-angular.module('shoppingPad').service('loginServices',loginServices)
+angular.module('shoppingPad').service('loginServices',loginServices);
 
 function loginServices($q,restService){
 
@@ -7,7 +7,6 @@ function loginServices($q,restService){
     var users=[];
     var mobile=null;
     var password=null;
-    var otp=null;
     var deferred=$q.defer();
 
     //getting user value from loginController
@@ -17,7 +16,7 @@ function loginServices($q,restService){
 
 
         return restService.postRequest('save/saveOTP',user,null).then(function(response){
-                //console.log('inside setUser');
+                console.log('save otp called from service');
                 deferred.resolve(response.status);
                 mobile = user.mobile;
                     password = user.password;
@@ -49,6 +48,21 @@ function loginServices($q,restService){
 
 })
     };
+
+    this.checkUser=function(mobile){
+        return restService.getRequest('save/all?m='+mobile,null).then(function(response){
+
+            deferred.reject()
+            return deferred.promise;
+
+        },function(error){
+
+            deferred.resolve();
+            return deferred.promise;
+
+        })
+    };
+
 
     this.verifyOTP=function(data){
         return restService.postRequest('save/saveData',data,null).then(function(response){

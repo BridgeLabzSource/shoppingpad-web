@@ -1,14 +1,14 @@
 angular.module('shoppingPad').service('restService',restService);
 function restService($http){
     //set port number and baseUrl here
-    var port=3055;
+    var port=4005;
     var baseUrl="http://localhost:"+port;
 
 //generic getRequest function
     this.getRequest=function(path,query){
         console.log("we are in the getRequest");
         var def=$http.get(baseUrl+"/"+path,query);
-        console.log(def)
+        console.log(def);
         return def;
     };//end of getRequest function
 

@@ -107,3 +107,18 @@
                 });
         });
 })();
+
+//if(mobile.length == 10){
+//    console.log('mobile 2' + typeof loginServices.getMobileNo());
+//    return $q(function(resolve,reject){
+//        if(loginServices.checkMobile(mobile))
+//        {
+//            console.log('mobile number exist');
+//        }
+//        else
+//        {
+//            console.log('not exist');
+//        }
+//    });
+//
+//}

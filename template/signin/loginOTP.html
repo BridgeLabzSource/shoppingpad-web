@@ -10,7 +10,7 @@
                     <div class="col-xs-8" style="height: 74px;">
                         <md-input-container>
                             <md-icon md-svg-icon="assets/images/device.svg"></md-icon>
-                            <input type="number" placeholder="Enter registered mobile no" name="name" id="name" ng-model="mobile" readonly>
+                            <input type="number" placeholder="Enter registered mobile no" name="name" id="name" ng-model="mobile" readonly enter-otp-validator>
                         </md-input-container>
                     </div>
                     <div class="col-xs-8" style="height: 74px;">
@@ -22,9 +22,10 @@
                     <div class="col-xs-8" style="height: 74px;">
                         <md-input-container class="loginFormEachInput">
                             <md-icon md-svg-icon="assets/images/lock.svg"></md-icon>
-                            <input type="password" placeholder="Enter OTP" name="otp" id="otp" ng-model="otp" ng-required="true" minlength="5">
+                            <input type="password" placeholder="Enter OTP" name="otp" id="otp" ng-model="otp" ng-required="true" minlength="5" enter-otp-validator>
                             <div ng-messages="myForm.name.$error">
                                 <div ng-message="required">Enter Pin no(6-digit).</div>
+                                <div ng-message="enterotp">invalid otp.</div>
                             </div>
                         </md-input-container>
                     </div>
